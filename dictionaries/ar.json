@@ -1,0 +1,9 @@
+{
+    "server-component": {
+      "welcome": "أهلاً بك"
+    },
+    "counter": {
+      "increment": "زيادة",
+      "decrement": "نقصان"
+    }
+}
