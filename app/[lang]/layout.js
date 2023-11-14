@@ -38,7 +38,7 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html  lang={params.lang} dir={direction}>
-      <body >
+      <body lang={params.lang} >
           <NavBar dict={dictionary["navBar"]} lang={params.lang} />
         {children}
             {/* NEWSLETTER-1 */}

@@ -21,6 +21,40 @@ src: url('../../../assets/fonts/EN/ArbFONTS-bukra-regular.ttf') format('truetype
 font-weight: normal;
 font-style: normal;
 }
+
+/* ARABIC FONTS START */
+/* Regular (Light) */
+@font-face {
+  font-family: 'DINNextLight';
+  src: url('../../../assets/fonts/AR/din-next-lt-w23-light.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+  }
+  
+  /* Medium */
+  @font-face {
+  font-family: 'DINNextMedium';
+  src: url('../../../assets/fonts/AR/din-next-lt-w23-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+  /* Ultra Light */
+  @font-face {
+  font-family: 'DINNextUltraLight';
+  src: url('../../../assets/fonts/AR/din-next-lt-w23-ultra-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+  /* Bold */
+  @font-face {
+  font-family: 'DINNextBold';
+  src: url('../../../assets/fonts/AR/DIN-NEXT™-ARABIC-BOLD.otf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+  }
+/* ARABIC FONTS END */
   
 /* ==========================================================================
   01. GENERAL & BASIC STYLES
@@ -38,12 +72,8 @@ body {
   font-weight: 400;
 }
 
-body.font--english{
-  font-family: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-body.font--arabic{
-  font-family: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+body[lang="ar"] {
+  font-family: 'DINNextMedium', sans-serif;
 }
 
 body.theme--dark,
@@ -304,6 +334,15 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.75px;
   font-weight: 400;
   margin-bottom: 0;
+}
+
+body[lang="ar"] h1, h2, h3, h4, h5, h6 {
+  font-family: 'DINNextBold', sans-serif;   
+}
+
+body[lang="ar"] a {
+  font-family: 'DINNextLight', sans-serif !important;   
+  /* background-color: #0fbc49 !important ;   */
 }
 
 .theme--dark h1, 
