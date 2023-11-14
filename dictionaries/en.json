@@ -5,21 +5,24 @@
         "title": "Welcome to Leen Whispers",
         "text": {
           "main": "Your one-stop beauty shop",
-          "button": "Discover More"
+          "button": "Discover More",
+          "link" :"en/about"
         }
       },
       {
         "title": "Enhance Your Beauty",
         "text": {
           "main": "Feel yourself more beautiful",
-          "button": "View Salon Menu"
+          "button": "View Salon Menu",
+          "link" : "en/pricing"
         }
       },
       {
         "title": "It’s a Pleasure to be Beautiful",
         "text": {
           "main": "Bring out your inner beauty",
-          "button": "Online Booking"
+          "button": "Online Booking",
+          "link" : "en/booking"
         }
       }
     ]

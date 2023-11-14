@@ -22,7 +22,7 @@ export default function HomeHero({dict}) {
                                                   </div>
                                                   <div className="text">
                                                       <h5 className="h5-lg">{slide.text.main}</h5>
-                                                      <a href="#" className="btn btn--tra-white hover--white">
+                                                      <a href={slide.text.link} className="btn btn--tra-white hover--white">
                                                           {slide.text.button}
                                                       </a>
                                                   </div>

@@ -126,7 +126,7 @@ export default function Services() {
                 <div className="col">
                 <div className="more-btn">
                     <a
-                    href="pricing-2.html"
+                    href="/pricing"
                     className="btn btn--tra-black hover--black"
                     >
                     View Our Menu

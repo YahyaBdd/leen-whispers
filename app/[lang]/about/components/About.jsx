@@ -1,6 +1,6 @@
 import Image from "next/image";
-import beauty_08 from '../../../../public/images/beauty_08.jpg'
-import salon_04 from '../../../../public/images/salon_04.jpg'
+import beauty_08 from '@/assets/images/beauty_08.jpg'
+import salon_04 from '@/assets/images/salon_04.jpg'
 
 export default function About({dict}) {
   return (

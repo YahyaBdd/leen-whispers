@@ -51,7 +51,7 @@ export default function PricingMenu({ lang }) {
     <div className="row">
       <div className="col">
         <div className="more-btn mt-6">
-          <a href="booking.html" className="btn btn--tra-black hover--black">
+          <a href={`${lang}/booking`} className="btn btn--tra-black hover--black">
             Book Online
           </a>
         </div>
@@ -81,7 +81,7 @@ const ItemPricingList = ({ item }) => {
             </div>
             <div className="price-dots" />
             <div className="price-number">
-            <p>{typeof subItem.price === 'number' ? `$${subItem.price}` : subItem.price}</p>
+            <p><sup style={{fontSize:'10px'}}>SAR</sup> {typeof subItem.price === 'number' ? `${subItem.price}` : subItem.price}</p>
             </div>
           </div>
           <div className="price-txt">

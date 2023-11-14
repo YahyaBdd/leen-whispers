@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import logoWhite from '../public/images/logo-white.png'
+import logoWhite from '@/assets/images/logo/Leen-Whispers_white_high-res-01.png'
 import logoBlack from '@/assets/images/logo/Leen-Whispers_gold_high-res-01.png'
 
 import { usePathname } from 'next/navigation'
@@ -30,13 +30,10 @@ export default function NavBar({dict,lang}) {
 
     const pathName = usePathname()
 
-    console.log(pathName)
-
     const redirectedPathName = (locale) => {
       if (!pathName) return '/'
       const segments = pathName.split('/')
       segments[1] = locale
-      console.log(segments.join('/'))
       return segments.join('/')
     }
 
@@ -47,10 +44,10 @@ export default function NavBar({dict,lang}) {
           {/* MOBILE HEADER */}
           <div className="wsmobileheader clearfix">
             <span className="smllogo">
-              <a href="#hero-1" className="logo-black" style={{marginRight: '100px'}}>
+              <a  href= "/" className="logo-black" style={{marginRight: '100px'}}>
                 <Image src={logoBlack} />
               </a>
-              <a href="#hero-1" className="logo-white" style={{marginRight: '100px'}}>
+              <a  href= "/" className="logo-white" style={{marginRight: '100px'}}>
                 <Image
                 src={logoWhite}
                 />
@@ -65,7 +62,7 @@ export default function NavBar({dict,lang}) {
             <div className="wsmainwp clearfix">
               {/* HEADER BLACK LOGO */}
               <div className="desktoplogo">
-                <a href="#hero-1" className="logo-black">
+                <a  href= "/" className="logo-black">
                   <Image
                   style={{width:'270px',maxHeight:'80px'}}
                   src={logoBlack} />
@@ -73,7 +70,7 @@ export default function NavBar({dict,lang}) {
               </div>
               {/* HEADER WHITE LOGO */}
               <div className="desktoplogo">
-                <a href="#hero-1" className="logo-white">
+                <a  href= "/" className="logo-white">
                 <Image
                 style={{width:'270px',maxHeight:'80px'}}
                 src={logoWhite}
@@ -82,34 +79,36 @@ export default function NavBar({dict,lang}) {
               </div>
               {/* MAIN MENU */}
               <nav className="wsmenu clearfix">
-                <ul className="wsmenu-list" >
+                <ul className="wsmenu-list" 
+                // style={{marginRight: '-15px'}}
+                 >
                   {/* DROPDOWN SUB MENU */}
                   <li aria-haspopup="true" >
-                    <a  href= {`${lang}/about`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px", paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
+                    <a  href= {`/${lang}/about`} style={{letterSpacing:'0px', paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
                       {dict.about}
                     </a>
                   </li>
                   {/* SIMPLE NAVIGATION LINK */}
                   <li className="nl-simple" aria-haspopup="true">
-                    <a href= {`${lang}/team`}style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
+                    <a href= {`/${lang}/team`}style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
                     {dict.team}
                     </a>
                   </li>
                   {/* DROPDOWN MENU */}
                   <li aria-haspopup="true">
-                    <a href= {`${lang}/pricing`}style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
+                    <a href= {`/${lang}/pricing`}style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
                       {dict.services}
                     </a>
                   </li>
 
                   <li aria-haspopup="true">
-                    <a href= {`${lang}/gallery`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
+                    <a href= {`/${lang}/gallery`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}} className="h-link">
                       {dict.gallery}
                     </a>
                   </li>
 
                   <li aria-haspopup="true">
-                    <a href= {`${lang}/contact`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}}  className="h-link">
+                    <a href= {`/${lang}/contact`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}}  className="h-link">
                       {dict.contact}
                     </a>
                   </li>
@@ -118,7 +117,7 @@ export default function NavBar({dict,lang}) {
                   <li className="nl-simple" aria-haspopup="true">
                     <a
                       style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}}
-                      href="/booking"
+                      href={`/${lang}/booking`}
                       className="btn btn--tra-white hover--white last-link"
                     >
                       {dict.booking}

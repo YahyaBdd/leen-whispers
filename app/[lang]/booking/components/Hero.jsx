@@ -10,8 +10,7 @@ export default function Hero({lang}) {
         </div>
       </div>
     </div>
-  </div>{" "}
-  {/* End container */}
+  </div>
 </section>
   )
 }

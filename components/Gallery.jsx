@@ -1,5 +1,4 @@
 import Image from 'next/image'
-// import woman_04 from "@/assets/images/gallery/woman_04.jpg";
 import woman_04 from "@/assets/images/gallery/woman_04.jpg";
 import woman_01 from "@/assets/images/gallery/woman_01.jpg";
 import woman_03 from "@/assets/images/gallery/woman_03.jpg";

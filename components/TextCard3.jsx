@@ -1,3 +1,5 @@
+import woman05 from '@/assets/images/woman_05.jpg'
+import Image from 'next/image'
 export default function TextCard3({dict}) {
   return (
     <section className="pt-8 ct-07 ws-wrapper content-section">
@@ -30,9 +32,9 @@ export default function TextCard3({dict}) {
             {/* IMAGE BLOCK */}
             <div className="col-lg-6 order-first order-lg-2">
               <div className="img-block right-column">
-                <img
+                <Image
                   className="img-fluid"
-                  src="images/woman_05.jpg"
+                  src={woman05}
                   alt="content-image"
                 />
               </div>

@@ -1,7 +1,6 @@
 import Team from "@/app/[lang]/team/components/Team";
 import WorkingHours from "@/components/WorkingHours";
 import Gallery from "@/components/Gallery";
-import NewsLetter from "@/components/NewsLetter";
 import { getDictionary } from "@/get-dictionary";
 
 export default async function TeamPage({params : {lang}}) {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function BookingForm({ lang }) {
   // Content in English
   const contentEnglish = {

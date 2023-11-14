@@ -1,5 +1,3 @@
-import icon from "@/assets/images/icons/beauty-treatment.png"
-import Image from "next/image"
 export default function Services({dict}) {
   return (
     <>
@@ -141,90 +139,5 @@ export default function Services({dict}) {
   </div>{" "}
   {/* END SERVICES-3 */}
 </>
-
-    // <section id="services-2" className="pt-6 services-section division">
-    //   <div className="container">
-    //     {/* SERVICES-2 WRAPPER */}
-    //     <div className="sbox-2-wrapper text-center">
-    //       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-    //         {/* SERVICES BOX #1 */}
-    //         <div className="col">
-    //           <div className="sbox-2 sb-1 wow fadeInUp">
-    //             {/* Icon */}
-    //             <div className="sbox-ico ico-65">
-    //               <span className="flaticon-facial-treatment" />
-    //             </div>
-    //             {/* Text */}
-    //             <div className="sbox-txt">
-    //               <h5 className="h5-lg">Skincare and Hair</h5>
-    //               <p>
-    //               Revitalize your hair and scalp with our nourishing treatments, from scalp cleaning to luxurious oil baths and exclusive trendy packages..
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>{" "}
-    //         {/* END SERVICES BOX #1 */}
-    //         {/* SERVICES BOX #2 */}
-    //         <div className="col">
-    //           <div className="sbox-2 sb-2 wow fadeInUp">
-    //             {/* Icon */}
-    //             <div className="sbox-ico ico-65">
-    //               <span className="flaticon-wax" />
-    //             </div>
-    //             {/* Text */}
-    //             <div className="sbox-txt">
-    //               <h5 className="h5-lg">Waxing</h5>
-    //               <p>
-    //                 Sagittis congue augue egestas integer diam purus magna and
-    //                 egestas magna suscipit
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>{" "}
-    //         {/* END SERVICES BOX #2 */}
-    //         {/* SERVICES BOX #3 */}
-    //         <div className="col">
-    //           <div className="sbox-2 sb-3 wow fadeInUp">
-    //             {/* Icon */}
-    //             <div className="sbox-ico ico-65">
-    //               {/* <Image style={{width:'75px' , height: '75px'}}  src={icon} alt="icon" /> */}
-    //               <span className="flaticon-cosmetics" />
-    //             </div>
-    //             {/* Text */}
-    //             <div className="sbox-txt">
-    //               <h5 className="h5-lg">Make-Up</h5>
-    //               <p>
-    //                 Sagittis congue augue egestas integer diam purus magna and
-    //                 egestas magna suscipit
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>{" "}
-    //         {/* END SERVICES BOX #3 */}
-    //         {/* SERVICES BOX #4 */}
-    //         <div className="col">
-    //           <div className="sbox-2 sb-4 wow fadeInUp">
-    //             {/* Icon */}
-    //             <div className="sbox-ico ico-65">
-    //               <span className="flaticon-nail-polish" />
-    //             </div>
-    //             {/* Text */}
-    //             <div className="sbox-txt">
-    //               <h5 className="h5-lg">Nails</h5>
-    //               <p>
-    //                 Sagittis congue augue egestas integer diam purus magna and
-    //                 egestas magna suscipit
-    //               </p>
-    //             </div>
-    //           </div>
-    //         </div>{" "}
-    //         {/* END SERVICES BOX #4 */}
-    //       </div>{" "}
-    //       {/* End row */}
-    //     </div>{" "}
-    //     {/* END SERVICES-2 WRAPPER */}
-    //   </div>{" "}
-    //   {/* End container */}
-    // </section>
   )
 }

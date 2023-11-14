@@ -1,4 +1,3 @@
-import Instagram from "@/components/Instagram";
 import BookingForm from "./components/BookingForm";
 import Hero from "./components/Hero";
 import WorkingHours from "@/components/WorkingHours";

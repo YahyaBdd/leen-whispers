@@ -117,7 +117,7 @@ export default function Team({lang}) {
                                             <span className="section-id">{member.title}</span>
                                             <h5 className="h5-lg">{member.name}</h5>
                                             <p className="tra-link">
-                                                <a href={member.profileLink}>View Profile</a>
+                                                <a href={`${lang}/artist`}>View Profile</a>
                                             </p>
                                         </div>
                                     </div>
