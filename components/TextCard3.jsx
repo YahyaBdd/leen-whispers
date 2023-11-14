@@ -1,4 +1,4 @@
-import woman05 from '@/assets/images/woman_05.jpg'
+import woman05 from '@/assets/images/model-05.jpeg'
 import Image from 'next/image'
 export default function TextCard3({dict}) {
   return (

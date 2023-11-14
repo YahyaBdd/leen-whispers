@@ -1,5 +1,5 @@
 import Image from "next/image";
-import beauty_08 from '@/assets/images/beauty_08.jpg'
+import beauty_08 from '@/assets/images/mpdel-03.jpeg'
 import salon_04 from '@/assets/images/salon_04.jpg'
 
 export default function About({dict}) {

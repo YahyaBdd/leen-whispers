@@ -55,8 +55,8 @@ const contentArabic = {
           <div className="row">
             <div className="col">
               <div className="page-hero-txt color--white">
-                <h2>{content.hero.title}</h2>
-                <p>{content.hero.description}</p>
+                <h2 style={{textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)", color: "#f0f0f0"}}>{content.hero.title}</h2>
+                <p style={{textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)", color: "#f0f0f0"}}>{content.hero.description}</p>
               </div>
             </div>
           </div>

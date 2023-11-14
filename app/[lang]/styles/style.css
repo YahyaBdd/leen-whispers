@@ -5500,15 +5500,15 @@ select:-webkit-autofill:focus {
 }
 
 #about-page.inner-page-hero {
-  background-image: url(../../../public/images/about-page.jpg);
+  background-image: url(../../../assets/images/interior-01.jpeg);
 }
 
 #booking-page.inner-page-hero {
-  background-image: url(../../../public/images/booking-page.jpg);
+  background-image: url(../../../assets/images/interior-07.jpeg);
 }
 
 #faqs-page.inner-page-hero {
-  background-image: url(../../../public/images/faqs-page.jpg);
+  background-image: url(../../../assets/images/interior-12.jpeg);
 }
 
 #gift-page.inner-page-hero {
@@ -5516,7 +5516,7 @@ select:-webkit-autofill:focus {
 }
 
 #pricing-page-1.inner-page-hero {
-  background-image: url(../../../public/images/pricing-1-page.jpg);
+  background-image: url(../../../assets/images/interior-14.jpeg);
 }
 
 #pricing-page-2.inner-page-hero {
@@ -5528,7 +5528,7 @@ select:-webkit-autofill:focus {
 }
 
 #team-page.inner-page-hero {
-  background-image: url(../../../public/images/team-page.jpg);
+  background-image: url(../../../assets/images/interior-04.jpeg);
 }
 
 /*------------------------------------------*/

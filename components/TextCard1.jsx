@@ -1,5 +1,5 @@
 import Image from "next/image"
-import woman2 from '@/assets/images/woman_02.jpg'
+import woman2 from '@/assets/images/model-01.jpeg'
 
 export default function TextCard1({dict}) {
   
