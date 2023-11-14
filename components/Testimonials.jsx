@@ -27,7 +27,7 @@ const Testimonials = ({dict}) => {
                 <div className="row d-flex justify-content-center">
                   <div className="col-lg-8">
                     <h5 className="mb-3">{testimonial.name}</h5>
-                    <p className="text-muted">
+                    <p>
                       <i className="fas fa-quote-left pe-2" />
                       {testimonial.quote}
                     </p>
