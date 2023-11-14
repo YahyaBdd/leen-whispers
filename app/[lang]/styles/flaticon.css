@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("../../../public/fonts/flaticond79d.ttf?b8e939e97cbbeabd5290d803a3b7e130") format("truetype"),
-url("../../../public/fonts/flaticond79d.woff?b8e939e97cbbeabd5290d803a3b7e130") format("woff"),
-url("../../../public/fonts/flaticond79d.woff2?b8e939e97cbbeabd5290d803a3b7e130") format("woff2"),
-url("../../../public/fonts/flaticond79d.eot?b8e939e97cbbeabd5290d803a3b7e130#iefix") format("embedded-opentype"),
-url("../../../public/fonts/flaticond79d.svg?b8e939e97cbbeabd5290d803a3b7e130#flaticon_beauty_salon") format("svg");
+    src: url("../../../assets/fonts/flaticond79d.ttf?b8e939e97cbbeabd5290d803a3b7e130") format("truetype"),
+url("../../../assets/fonts/flaticond79d.woff?b8e939e97cbbeabd5290d803a3b7e130") format("woff"),
+url("../../../assets/fonts/flaticond79d.woff2?b8e939e97cbbeabd5290d803a3b7e130") format("woff2"),
+url("../../../assets/fonts/flaticond79d.eot?b8e939e97cbbeabd5290d803a3b7e130#iefix") format("embedded-opentype"),
+url("../../../assets/fonts/flaticond79d.svg?b8e939e97cbbeabd5290d803a3b7e130#flaticon_beauty_salon") format("svg");
 }
 
 span[class^="flaticon-"]:before, 
