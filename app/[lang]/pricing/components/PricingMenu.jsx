@@ -81,7 +81,7 @@ const ItemPricingList = ({ item }) => {
             </div>
             <div className="price-dots" />
             <div className="price-number">
-            <p><sup style={{fontSize:'10px'}}>SAR</sup> {typeof subItem.price === 'number' ? `${subItem.price}` : subItem.price}</p>
+            <p><sup style={{fontSize:'10px'}}>SAR</sup> {typeof subItem.price === 'number' ? subItem.price : subItem.price}</p>
             </div>
           </div>
           <div className="price-txt">
