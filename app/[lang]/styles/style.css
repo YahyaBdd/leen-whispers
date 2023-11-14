@@ -1,21 +1,27 @@
+/* 29LT Bukra Bold Italic */
+@font-face {
+font-family: 'BukraBoldItalic';
+src: url('../../../assets/fonts/EN/29ltbukra-bold-italic.otf') format('opentype');
+font-weight: bold;
+font-style: italic;
+}
 
+/* ArbFONTS Bukra Light */
+@font-face {
+font-family: 'BukraLight';
+src: url('../../../assets/fonts/EN/ArbFONTS-bukra-light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
 
-
-
-/*
-  Template Name: Reine - Beauty Salon HTML5 Template
-  Theme URL: https://themeforest.net/user/dsathemes
-  Description: Reine - Beauty Salon HTML5 Template
-  Author: DSAThemes
-  Author URL: https://themeforest.net/user/dsathemes
-  Version: 1.1.0
-  Website: www.dsathemes.com
-  Tags: DSAThemes, Beauty, Salon, Beauty Parlour, Health Care, Makeup, Nail Salon, Therapy, Treatment, Wellness
-*/
-
-
-
-
+/* ArbFONTS Bukra Regular */
+@font-face {
+font-family: 'BukraRegular';
+src: url('../../../assets/fonts/EN/ArbFONTS-bukra-regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+  
 /* ==========================================================================
   01. GENERAL & BASIC STYLES
   =========================================================================== */
@@ -26,10 +32,18 @@ html {
 } 
 
 body {
-  font-family: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'BukraRegular', sans-serif;
   color: #6f6f6f;
   line-height: 1.6666;
   font-weight: 400;
+}
+
+body.font--english{
+  font-family: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body.font--arabic{
+  font-family: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body.theme--dark,
@@ -285,7 +299,7 @@ section,
 
 h1, h2, h3, h4, h5, h6 {  
   color: #363636;
-  font-family: 'Vollkorn', serif;
+  font-family: 'BukraBoldItalic' , serif;
   letter-spacing: 0;
   letter-spacing: -0.75px;
   font-weight: 400;
@@ -1026,8 +1040,43 @@ p.tra-link a:hover:after {
 /* ==========================================================================
   03. PRELOAD ANIMATION
   ========================================================================== */
-
-#loading {
+  /* .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  } */
+/* #loading {
   height: 100%;
   width: 100%;
   position: fixed;
@@ -1164,7 +1213,7 @@ p.tra-link a:hover:after {
   100% {
     transform: rotate(-360deg);
   }
-}
+} */
     
     
 

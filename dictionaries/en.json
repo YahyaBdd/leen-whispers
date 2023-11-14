@@ -1,9 +1,228 @@
 {
-    "server-component": {
-      "welcome": "Welcome"
-    },
-    "counter": {
-      "increment": "Increment",
-      "decrement": "Decrement"
+  "heroSection": {
+    "slides": [
+      {
+        "title": "Welcome to Leen Whispers",
+        "text": {
+          "main": "Your one-stop beauty shop",
+          "button": "Discover More"
+        }
+      },
+      {
+        "title": "Enhance Your Beauty",
+        "text": {
+          "main": "Feel yourself more beautiful",
+          "button": "View Salon Menu"
+        }
+      },
+      {
+        "title": "It’s a Pleasure to be Beautiful",
+        "text": {
+          "main": "Bring out your inner beauty",
+          "button": "Online Booking"
+        }
+      }
+    ]
+  },
+
+  "contentSection": {
+    "sectionId": "Mind, Body and Soul",
+    "title": "Luxury salon where you will feel unique",
+    "text": "After several years of providing home services, and thanks to the great support, trust, and love from the distinguished ladies of the community, we decided to turn that idea into a tangible reality by creating a comprehensive salon. This salon aims to serve beautiful women, allowing them to enjoy the finest details and comprehensive care. We are committed to providing our services with love and attention, continuing to deliver the best in the ways you have come to expect from us.",
+    "button": {
+      "text": "Discover More"
     }
+  },
+
+  "footer" : {
+    "location": {
+      "title": "Our Location",
+      "salonName": "Leen Whispers",
+      "address": "6305 Abi Dajanah, Al Mursilat, Riyadh 12461, Saudi Arabia"
+    },
+    "getInTouch": {
+      "title": "Get in Touch",
+      "phone": "+966 55 607 0858",
+      "email": "maha.abdulaziz@leenwhispers.com",
+      "socials": [
+        { "platform": "Facebook", "link": "#" },
+        { "platform": "Twitter", "link": "#" },
+        { "platform": "YouTube", "link": "#" }
+      ]
+    },
+    "workingHours": {
+      "title": "Working Hours",
+      "days": [
+        { "day": "Mon-Fri", "hours": "10:00AM - 9:00PM" },
+        { "day": "Saturday", "hours": "10:00AM - 7:00PM" },
+        { "day": "Sunday", "hours": "10:00PM - 7:00PM" }
+      ]
+    }
+  },
+
+  "newsletter" : {
+    "title": "Join Our Newsletter",
+    "description": "Receive beauty and wellness insights, events and latest offers!",
+    "form": {
+      "placeholder": "Enter your email",
+      "buttonText": "Subscribe"
+    }
+  },
+
+  "navBar" : {
+    "about" : "about",
+    "team" : "Team",
+    "services": "services" ,
+    "gallery" : "gallery" ,
+    "booking" : "Book Online",
+    "contact" : "contact us"
+  },
+
+  "instagram":{
+    "follow" : "Follow"
+  },
+
+  "location" : {
+    "sectionTitle": "Our Location",
+    "welcomeTitle": "Welcome to Leen Whispers",
+    "address": "6305 Abi Dajanah, Al Mursilat, Riyadh 12461, Saudi Arabia",
+    "advantages": [
+      {
+        "label": "Learn More",
+        "link": "/about"
+      },
+      {
+        "label": "Book Now",
+        "link": "/booking"
+      }
+    ]
+  },
+
+  "testemonials" : {
+    "title" : "TESTIMONIALS",
+    "subtitle" : "Comments & Reviews",
+    "testimonials": [
+      {
+        "name": "Rasha Shehadeh",
+        "quote": "It was the best! Cozy and elegant ambiance 🌟The staff are amazing Madame Leen is so kind, i will always recommend them for my friends 👏🏻",
+        "stars": ["flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1"]
+      },
+      {
+        "name": "kholud mohammed",
+        "quote": "The place is beautiful, nice, classy, ​​quiet. The treatment is amazing. From the moment I entered, I felt comfortable with them over and over again I had my hair fixed by a nice and smart Jane May God grant them success and bless them, and the hospitality was a nice thing 🙏🏻",
+        "stars": ["flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-half-empty"]
+      },
+      {
+        "name": "Reema Alhudithy",
+        "quote": "Everything was perfect!! The service was sometimes nice and the workers were understanding and experienced 😍😍😍 The treatment forces you to come back a second of kindness and generosity. Thank you from the bottom of my heart 🙏🏼",
+        "stars": ["flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1"]
+      },
+      {
+        "name": "Nody abaya",
+        "quote": "The salon is very beautiful, elegant, and luxurious at the same time. The employees’ behavior is very respectful and comfortable. I had my hair cut by Faten, an artist. You guys are very respectful and helpful. Thank you very much👍🏻❤️",
+        "stars": ["flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-1", "flaticon-star-half-empty"]
+      }
+    ]
+  },
+
+  "discount": {
+    "sectionId": "This Week Only",
+    "title": "Get 100% OFF Discount",
+    "subtitle": "After the fifth visit",
+    "buttonText": "Book an Appointment"
+  },
+
+  "gallery": {
+    "sectionId": "Be a more perfect",
+    "title": "Redefine Your Beauty",
+    "buttonText": "Visit Our Gallery"
+  },
+
+  "services" : {
+    "sectionId": "Indulge Yourself",
+    "title": "Feel Yourself More Beautiful",
+    "text": "Our beauty salon offers a wide range of services to cater to your skincare, hair care, and beauty needs. Explore our diverse categories and treat yourself to a world of pampering and transformation.",
+    "icons": {
+      "facials": "Facials",
+      "eyelash": "Eyelash",
+      "eyebrow": "Eyebrow",
+      "waxing": "Waxing",
+      "nails": "Nails",
+      "makeup": "Make-Up"
+    },
+    "cta" : "View Our Menu"
+  },
+
+  "workingHours" : {
+    "sectionId": "Time Schedule",
+    "title": "Working Hours",
+    "text": "Our working hours are designed to accommodate your busy schedule. We look forward to serving you during the following hours:",
+    "days": {
+      "monWed": "Mon – Wed",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "sun": "Sun - Sun"
+    },
+    "hours": {
+      "monWed": "10:00 AM - 9:00 PM",
+      "thursday": "10:00 AM - 7:30 PM",
+      "friday": "10:00 AM - 9:00 PM",
+      "sun": "10:00 AM - 5:00 PM"
+    }
+  },
+
+  "textContent3" : {
+    "sectionId": "Come, Relax and Enjoy",
+    "title": "Place where you will feel peaceful",
+    "text": "Indulge in the epitome of quality and excellence at our establishment. We take pride in delivering top-notch services and products that ensure your satisfaction. Our skilled team, comprised of experts in their respective fields, is dedicated to providing you with an experience that goes beyond expectations. Come, relax, and enjoy the harmonious blend of premium services and a talented team, all crafted to make you feel truly pampered.",
+    "cta" : "View Our Team"
+  },
+
+  "aboutPage" : {
+    "hero" : {
+      "title":"About Lene Whispers",
+      "subtitle":"Luxury salon where you will feel unique and special"
+    },
+    "sectionId": "Mind, Body, and Soul",
+    "title": "Indulge in Luxury: A Salon Where You'll Feel Truly Unique",
+    "text1": "Elevate your senses at our luxurious salon, where we specialize in pampering your mind, body, and soul. Immerse yourself in an oasis of tranquility and rejuvenation. Our expert team is dedicated to providing personalized and top-notch services that cater to your unique beauty and relaxation needs.",
+    "text2": "Discover a haven of tranquility and rejuvenation at our luxurious salon. Our dedicated team of experts is committed to delivering exceptional services tailored to your unique beauty and relaxation needs. Immerse yourself in the epitome of luxury and comfort, where each client is treated as a unique individual deserving the utmost care and attention. Experience the epitome of luxury and comfort at our salon, where you are not just a client; you are an individual deserving of the finest care and attention."
+  },
+  
+  "contactPage" : {
+    "location": {
+      "title": "Our Location:",
+      "address": [
+        "6305 Abi Dajanah, Al Mursilat,",
+        " Riyadh 12461, Saudi Arabia"
+      ],
+      "contacts": [
+        "+966 55 607 0858",
+        "maha.abdulaziz@leenwhispers.com"
+      ]
+    },
+    "salonHours": {
+      "title": "Salon Hours:",
+      "hours": [
+        "Mon – Wed: 10:00AM - 9:00PM",
+        "Thursday: 10:00AM - 7:30PM",
+        "Friday: 10:00AM - 9:00PM",
+        "Sun - Sun: 11:00AM - 5:00PM"
+      ]
+    },
+    "contactForm": {
+      "title": "Send a Message",
+      "formFields": {
+        "name": "Your Name*",
+        "email": "Email Address*",
+        "subject": "What's this about?"
+      },
+      "message": "Your Message ...",
+      "cta" : "Send Message"
+    }
+  }
+  
+  
+  
+  
 }

@@ -1,0 +1,37 @@
+/* Regular (Light) */
+@font-face {
+font-family: 'DINNextLight';
+src: url('../../assets/fonts/AR/din-next-lt-w23-light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Medium */
+@font-face {
+font-family: 'DINNextMedium';
+src: url('../../assets/fonts/AR/din-next-lt-w23-medium.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Ultra Light */
+@font-face {
+font-family: 'DINNextUltraLight';
+src: url('../../assets/fonts/AR/din-next-lt-w23-ultra-light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Bold */
+@font-face {
+font-family: 'DINNextBold';
+src: url('../../assets/fonts/AR/DIN-NEXT™-ARABIC-BOLD.otf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+.arabic-bold-text {
+font-family: 'DINNextBold', sans-serif;
+font-weight: bold; /* Since 'ultra' is usually bold */
+}
