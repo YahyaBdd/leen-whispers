@@ -29,7 +29,7 @@ const Footer = ({dict}) => {
               <ul className="foo-socials ico-20 text-center clearfix">
                 {dict.getInTouch.socials.map((social, index) => (
                   <li key={index}>
-                    <a href={social.link} className={`ico-${social.platform.toLowerCase()}`}>
+                    <a href={social.link} className={`ico-${social.platform.toLowerCase()}`} target="_blank">
                       <span className={`flaticon-${social.platform.toLowerCase()}`} />
                     </a>
                   </li>
