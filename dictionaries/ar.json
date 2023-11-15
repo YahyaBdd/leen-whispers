@@ -48,9 +48,10 @@
       "phone": "+966 55 607 0858",
       "email": "maha.abdulaziz@leenwhispers.com",
       "socials": [
-        { "platform": "فيسبوك", "link": "#" },
-        { "platform": "تويتر", "link": "#" },
-        { "platform": "يوتيوب", "link": "#" }
+        { "platform": "instagram-1", "link": "https://www.instagram.com/leenwhispersbeauty" },
+        { "platform": "tik-tok", "link": "https://www.tiktok.com/@leen.whispers.bea" },
+        { "platform": "snapchat", "link": "https://www.snapchat.com/add/leenwhispers" },
+        { "platform": "whatsapp", "link": "https://iwtsp.com/966556070858" }
       ]
     },
     "workingHours": {
