@@ -53,7 +53,8 @@ export default async function RootLayout({ children, params }) {
   <Script src="/js/menu.js" strategy="afterInteractive" />
   <Script src="/js/tweenmax.min.js" strategy="afterInteractive" /> 
   <Script src="/js/slideshow.js" strategy="afterInteractive" />
-  {/* <Script src="/js/datetimepicker.js"  strategy="afterInteractive"/>
+  {/* <Script src="/js/datetimepicker.js"  strategy="afterInteractive"/> */}
+  {/* 
   <Script src="/js/owl.carousel.min.js" strategy="afterInteractive" />
   <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
   <Script src="/js/request-form.js" strategy="afterInteractive" />
