@@ -83,6 +83,7 @@ export default function SignIn({dict}) {
                 required
               />
             </div>
+            <p style={{fontSize:"medium"}}>*Use universal format (Ex. +966)</p>
             <div className="col-md-12">
               <input
                 type="password"

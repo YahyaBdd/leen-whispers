@@ -37,30 +37,21 @@ export default function Register({dict}) {
     e.preventDefault();
 
     if(pwd !== rePwd) {
-        console.log(`pwd: ${pwd} rePwd: ${rePwd}`)
         setErrors("Passwords should match");
         return;
     } else {
-        console.log(`pwd: ${pwd} rePwd: ${rePwd}`)
         setErrors("");
     }   
-
-    console.log("sending otp to: " + phoneNumber + "")
 
     onCaptchVerify();
     const formatPh = "+" + phoneNumber;
 
-    console.log(formatPh);
-
     const appVerifier = window.recaptchaVerifier;
-
-    console.log(appVerifier);
 
     signInWithPhoneNumber(auth, formatPh, appVerifier)
         .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
         setShowOTP(true);
-        console.log(otp);
         })
         .catch((error) => {
         setErrors("invalid phone number");
@@ -70,12 +61,9 @@ export default function Register({dict}) {
   
     function onOTPVerify(e) {
     e.preventDefault();
-    console.log(otp);
     window.confirmationResult
         .confirm(otp)
         .then(async (res) => {
-        console.log(res);
-
         const data = {
             fullName : fullName,
             phoneNumber: phoneNumber,
@@ -87,6 +75,8 @@ export default function Register({dict}) {
 
         localStorage.setItem("userName", fullName);
         localStorage.setItem("identifier", phoneNumber);
+
+        window.location.reload();
         })
         .catch((err) => {
         console.log(err);
@@ -109,7 +99,7 @@ export default function Register({dict}) {
         localStorage.setItem("userName", result.user.displayName);
         localStorage.setItem("identifier", result.user.email);
 
-
+        window.location.reload();
         }).catch((error) => {
         console.log(error.message);
     });
@@ -132,6 +122,7 @@ export default function Register({dict}) {
         localStorage.setItem("userName", result.user.displayName);
         localStorage.setItem("identifier", result.user.email);
 
+        window.location.reload();
         })
         .catch((error) => {
         console.log(error.message);
