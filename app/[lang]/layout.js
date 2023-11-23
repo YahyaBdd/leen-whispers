@@ -61,7 +61,7 @@ export default async function RootLayout({ children, params }) {
   <Script src="/js/jquery.validate.min.js" strategy="afterInteractive" />
   <Script src="/js/jquery.ajaxchimp.min.js" strategy="afterInteractive" />
   <Script src="/js/popper.min.js" strategy="afterInteractive" />
-  <Script src="/js/lunar.js" strategy="afterInteractive" /> */}
+<Script src="/js/lunar.js" strategy="afterInteractive" /> */}
   {/* <Script src="/js/wow.js" strategy="afterInteractive" /> */}
   <Script src="/js/custom.js" strategy="afterInteractive" />
       </body>

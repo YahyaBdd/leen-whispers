@@ -1,4 +1,4 @@
-export default function BookingForm({ lang }) {
+export default function BookingForm({ lang, userData }) {
   // Content in English
   const contentEnglish = {
     firstNamePlaceholder: 'First Name*',
@@ -75,7 +75,8 @@ export default function BookingForm({ lang }) {
                 name="firstname"
                 className="form-control firstname"
                 placeholder={content.firstNamePlaceholder}
-                required=""
+                value={userData?.firstName || ''}
+                required
               />
             </div>
             <div className="col-lg-6">
@@ -84,6 +85,7 @@ export default function BookingForm({ lang }) {
                 name="lastname"
                 className="form-control lastname"
                 placeholder={content.lastNamePlaceholder}
+                value={userData?.lastName || ''}
                 required=""
               />
             </div>
@@ -93,6 +95,7 @@ export default function BookingForm({ lang }) {
                 name="email"
                 className="form-control email"
                 placeholder={content.emailAddressPlaceholder}
+                value={userData?.identifier.includes("@") ? userData.identifier : ''}
                 required=""
               />
             </div>
@@ -102,6 +105,7 @@ export default function BookingForm({ lang }) {
                 name="phone"
                 className="form-control phone"
                 placeholder={content.phoneNumberPlaceholder}
+                value={userData?.identifier.includes("@") ? '' : "+ "+userData.identifier}
                 required=""
               />
             </div>
@@ -111,7 +115,7 @@ export default function BookingForm({ lang }) {
                 className="form-select service"
                 aria-label="Service Select"
               >
-                <option selected="">{content.selectService}</option>
+                <option value="">{content.selectService}</option>
                   {content.services.map((service, index) => (
                     <option key={index}>{service}</option>
                   ))}
@@ -124,10 +128,10 @@ export default function BookingForm({ lang }) {
                 className="form-select staff"
                 aria-label="Staff Select"
               >
-                <option selected="">
+                <option value="">
                   {content.selectStaff}
                 </option>
-                <option selected="">{content.selectService}</option>
+                <option value="">{content.selectService}</option>
                   {content.staff.map((service, index) => (
                     <option key={index}>{service}</option>
                   ))}
