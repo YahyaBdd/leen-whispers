@@ -1,6 +1,6 @@
 import Image from "next/image";
 import beauty_08 from '@/assets/images/mpdel-03.jpeg'
-import salon_04 from '@/assets/images/salon_04.jpg'
+import salon_04 from '@/assets/images/interior-14.jpeg'
 
 export default function About({dict}) {
   return (
@@ -25,7 +25,7 @@ export default function About({dict}) {
           <div className="ct-03-img">
             <Image
             className="img-fluid"
-            src={beauty_08}
+            src={salon_04}
             alt="content-image"
             />
           </div>
@@ -39,7 +39,7 @@ export default function About({dict}) {
           <div className="ct-03-img mb-5">
             <Image
             className="img-fluid"
-            src={salon_04}
+            src={beauty_08}
             alt="content-image"
             />
           </div>
