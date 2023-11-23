@@ -4,7 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import React, { useState } from 'react'
 
 
-export default function SignIn() {
+export default function SignIn({dict}) {
 
     const [phoneNumber, setPhoneNumber] = useState("");
     const [pwd, setPwd] = useState("");
@@ -56,7 +56,7 @@ export default function SignIn() {
 
   return (
     <>
-        <p className="text-center">Sign in with:</p>
+        <p className="text-center">{dict.title}</p>
         <ul className="foo-socials ico-20 text-center clearfix" style={{marginTop: "0px !important", marginLeft:"10px !important" }}>
             <li>
                 <a onClick={signInWithFacebook}>
@@ -78,7 +78,7 @@ export default function SignIn() {
                 type="text"
                 name="phoneNumber"
                 className="form-control date"
-                placeholder="Enter your phone number*"
+                placeholder={dict.phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
               />
@@ -88,7 +88,7 @@ export default function SignIn() {
                 type="password"
                 name="date"
                 className="form-control date"
-                placeholder="Enter your password*"
+                placeholder={dict.pwd}
                 onChange={(e) => setPwd(e.target.value)}
                 required
               />
@@ -100,7 +100,7 @@ export default function SignIn() {
                 className="btn btn--tra-black hover--black submit"
                 onClick={signInUser}
               >
-                Sign In
+                {dict.button}
               </button>
             </div>
         </form>

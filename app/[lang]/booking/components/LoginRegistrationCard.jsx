@@ -11,7 +11,7 @@ import SignIn from "./SignIn";
 import Register from "./Register";
 
 
-export default function LoginRegistrationCard({lang}) {
+export default function LoginRegistrationCard({lang,dict}) {
 
     const [activeTab, setActiveTab] = useState('signIn');
     const [userName, setUserName] = useState(localStorage.getItem("userName"))
@@ -41,10 +41,10 @@ export default function LoginRegistrationCard({lang}) {
       {userName ? (
         <>
         <div className="container text-center">
-            <h2>Welcome {userName}</h2>
-            <p>Thanks for registration, book an apointment</p>
+            <h2>{dict.welcoming.title} {userName}</h2>
+            <p>{dict.welcoming.text}</p>
             <a className="btn btn--tra-black hover--black submit" onClick={removeCookie}>
-                Logout
+              {dict.welcoming.button}  
             </a>
         </div>
         <BookingForm lang={lang} userData={userData}/>        
@@ -62,7 +62,7 @@ export default function LoginRegistrationCard({lang}) {
                       className={`btn btn--tra-black hover--black nav-link ${activeTab === 'signIn' ? 'active' : ''}`}
                       onClick={() => handleTabChange('signIn')}
                     >
-                      Sign In
+                      {lang === "en" ? "Sign In" : "تسجيل الدخول"}
                     </button>
                   </li>
                   
@@ -71,7 +71,7 @@ export default function LoginRegistrationCard({lang}) {
                       className={`btn btn--tra-black hover--black nav-link ${activeTab === 'registration' ? 'active' : ''}`}
                       onClick={() => handleTabChange('registration')}
                     >
-                      Register
+                      {lang === "en" ? "Register" : "إنشاء حساب"}
                     </button>
                   </li>
                 </ul>
@@ -80,8 +80,8 @@ export default function LoginRegistrationCard({lang}) {
             <br />
             <br />
           <div  className="row ">
-            {activeTab === 'signIn' && (<SignIn/>)}
-            {activeTab === 'registration' && (<Register/>)}
+            {activeTab === 'signIn' && (<SignIn dict={dict.signIn}/>)}
+            {activeTab === 'registration' && (<Register dict={dict.register}/>)}
         </div> 
         </div>
       </div>{" "}

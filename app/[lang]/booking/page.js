@@ -13,7 +13,7 @@ export default async function index({params : {lang}}) {
     return(
         <>
             <Hero lang={lang}/>
-            <LoginRegistrationCard lang={lang} />
+            <LoginRegistrationCard lang={lang} dict={dictionary["bookingPage"]} />
             {/* <BookingForm lang={lang}/> */}
             <WorkingHours dict={dictionary["workingHours"]}/>
             <Location dict={dictionary["location"]} />

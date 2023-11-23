@@ -222,7 +222,35 @@
       "message": "Your Message ...",
       "cta" : "Send Message"
     }
+  },
+
+  "bookingPage" :{
+    "signIn":{
+      "title": "Sign in with",
+      "phoneNumber" : "Enter your phone number*",
+      "pwd" : "Enter your password*",
+      "button" : "Sign In"
+    },
+    "register":{
+      "title": "Sign up with",
+      "name" : "Enter your name*",
+      "pwd" : "Enter your password*",
+      "rePwd" : "Re-enter your password*",
+      "button" : "register",
+      "otp" : {
+        "title" : "Verification Code Sent",
+        "otp" : "Verify your phone number*",
+        "button" : "Verify otp"
+      }
+    },
+    "welcoming":{
+      "title" : "Welcome",
+      "text" : "Thanks for registration, book an apointment",
+      "button" : "logout"
+    }
   }
+
+
   
   
   
