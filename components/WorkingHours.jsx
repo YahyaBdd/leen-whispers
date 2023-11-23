@@ -25,11 +25,6 @@ export default function WorkingHours({dict}) {
                     <td className="text-end">{dict.hours.monWed}</td>
                   </tr>
                   <tr>
-                    <td>{dict.days.thursday}</td>
-                    <td> - </td>
-                    <td className="text-end">{dict.hours.thursday}</td>
-                  </tr>
-                  <tr>
                     <td>{dict.days.friday}</td>
                     <td> - </td>
                     <td className="text-end">{dict.hours.friday}</td>
