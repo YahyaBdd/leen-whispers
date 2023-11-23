@@ -2,7 +2,7 @@ import Image from 'next/image'
 import woman_04 from "@/assets/images/gallery/woman_04.jpg";
 import woman_01 from "@/assets/images/gallery/woman_01.jpg";
 import woman_03 from "@/assets/images/gallery/woman_03.jpg";
-import woman_02 from "@/assets/images/gallery/woman_02.jpg";
+import woman_02 from "@/assets/images/model-02.jpeg";
 import woman_05 from "@/assets/images/gallery/woman_05.jpg";
 import woman_06 from "@/assets/images/gallery/woman_06.jpg";
 
