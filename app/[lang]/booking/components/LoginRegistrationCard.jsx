@@ -9,6 +9,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import BookingForm from "./BookingForm";
 import SignIn from "./SignIn";
 import Register from "./Register";
+import SocialLogin from "./SocialLogin";
 
 
 export default function LoginRegistrationCard({lang,dict}) {
@@ -38,6 +39,7 @@ export default function LoginRegistrationCard({lang,dict}) {
 
   return (
     <div className="pt-8 pb-7 booking-section division">
+      
       {userName ? (
         <>
         <div className="container text-center">
@@ -49,34 +51,29 @@ export default function LoginRegistrationCard({lang,dict}) {
         </div>
         <BookingForm lang={lang} userData={userData}/>        
         </>
-      ) : (    
+      ) : (
+        <>
+        <SocialLogin/> 
+        <br />
       <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 col-xl-9">
-            
-        <div className="row">
-              <div className="col-md-12">
-                <ul className="nav nav-tabs justify-content-center">
-                  <li className="nav-item">
-                    <button
-                      className={`btn btn--tra-black hover--black nav-link ${activeTab === 'signIn' ? 'active' : ''}`}
-                      onClick={() => handleTabChange('signIn')}
-                    >
-                      {lang === "en" ? "Sign In" : "تسجيل الدخول"}
-                    </button>
-                  </li>
-                  
-                  <li className="nav-item">
-                    <button
-                      className={`btn btn--tra-black hover--black nav-link ${activeTab === 'registration' ? 'active' : ''}`}
-                      onClick={() => handleTabChange('registration')}
-                    >
-                      {lang === "en" ? "Register" : "إنشاء حساب"}
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div className="container" style={{display:'flex', flexDirection: 'row', justifyContent:'center'}}>
+          <button
+            style={{marginRight: '10px'}}
+            className={`btn btn--tra-black hover--black nav-link ${activeTab === 'signIn' ? 'active' : ''}`}
+            onClick={() => handleTabChange('signIn')}
+          >
+            {lang === "en" ? "Sign In" : "تسجيل الدخول"}
+          </button>
+      
+          <button
+            className={`btn btn--tra-black hover--black nav-link ${activeTab === 'registration' ? 'active' : ''}`}
+            onClick={() => handleTabChange('registration')}
+          >
+            {lang === "en" ? "Register" : "إنشاء حساب"}
+          </button>
+        </div>
             <br />
             <br />
           <div  className="row ">
@@ -85,7 +82,9 @@ export default function LoginRegistrationCard({lang,dict}) {
         </div> 
         </div>
       </div>{" "}
-    </div>)}
+    </div>
+    </>
+    )}
 
   </div>
 
