@@ -9,6 +9,7 @@ import Gallery from '@/components/Gallery';
 import Discount from '@/components/Discount';
 import Location from '@/components/Location';
 import {getDictionary} from "@/get-dictionary";
+import DiscountModal from '@/components/DiscountModal';
 
 
 export default async function Home({ params: { lang } }) {
@@ -43,6 +44,7 @@ export default async function Home({ params: { lang } }) {
     <Testimonials dict={dictionary["testemonials"]} />
     {/* LOCATION */}
     <Location dict={dictionary["location"]} />
+    <DiscountModal dict={dictionary["modal"]} />
   </div>{" "}
   {/* END PAGE CONTENT */}
 </div>

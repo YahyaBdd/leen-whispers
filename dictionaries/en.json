@@ -248,7 +248,14 @@
       "text" : "Thanks for registration, book an apointment",
       "button" : "logout"
     }
-  }
+  },
+  "modal" : {
+    "modalTitle": "Get 10% Off",
+    "modalSubtitle": "Your First Order",
+    "modalText": "Sign up to our newsletter to receive your coupon code",
+    "emailPlaceholder": "Enter your email",
+    "submitButton": "Submit"
+}
 
 
   
