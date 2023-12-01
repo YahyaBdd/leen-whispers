@@ -51,7 +51,7 @@ export default function PricingMenu({ lang }) {
     <div className="row">
       <div className="col">
         <div className="more-btn mt-6">
-          <a href={`${lang}/booking`} className="btn btn--tra-black hover--black">
+          <a href={'/booking'} className="btn btn--tra-black hover--black">
             Book Online
           </a>
         </div>
