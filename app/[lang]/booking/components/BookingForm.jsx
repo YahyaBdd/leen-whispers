@@ -159,27 +159,8 @@ export default function BookingForm({ lang, userData }) {
     phoneNumberPlaceholder: 'رقم الهاتف*',
     selectService: 'اختر الخدمة',
     selectStaff: 'اختر الموظف',
-    services: [
-      'قص الشعر وتصفيفه',
-      'تلوين الشعر',
-      'علاجات الشعر',
-      'تمديدات الشعر',
-      'العناية بالبشرة والتجميل',
-      'تشميع الجسم',
-      'مكياج وحواجب',
-      'مانيكير وباديكير',
-    ],
-    staff: [
-      'فيرونيكا آرون',
-      'أوليفيا جروش',
-      'إيفا أندرسون',
-      'جيسيكا بريستون',
-      'إيفلين سانشيز',
-      'كريستين كورتيس',
-      'أي موظف متاح',
-    ],
     appointmentDatePlaceholder: 'تاريخ الموعد*',
-    bookButton: 'حجز موعد',
+    bookButton: 'أو احجز الآن وادفع في المكان',
   };
 
   const content = lang === 'ar' ? contentArabic : contentEnglish;
