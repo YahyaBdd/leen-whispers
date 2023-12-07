@@ -148,27 +148,8 @@ export default function BookingForm({ lang, userData }) {
     phoneNumberPlaceholder: 'Phone Number*',
     selectService: 'Select Service',
     selectStaff: 'Select Staff',
-    services: [
-      'Hair Cut & Styling',
-      'Hair Coloring',
-      'Hair Treatments',
-      'Hair Extensions',
-      'Skin Care & Facials',
-      'Body Waxing',
-      'Makeup & Eyebrows',
-      'Manicure & Pedicure',
-    ],
-    staff: [
-      'Veronica Aaron',
-      'Olivia Grosh',
-      'Eva Anderson',
-      'Jessica Priston',
-      'Evelyn Sanchez',
-      'Kristin Cortes',
-      'Any Available Staff',
-    ],
     appointmentDatePlaceholder: 'Appointment Date*',
-    bookButton: 'Book Appointment',
+    bookButton: 'Or Book Now, and pay in person',
   };
 
   const contentArabic = {
