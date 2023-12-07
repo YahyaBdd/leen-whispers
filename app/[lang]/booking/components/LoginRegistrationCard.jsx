@@ -1,25 +1,16 @@
 "use client"
 
-import { auth, db } from "@/firebase";
-import {FacebookAuthProvider, GoogleAuthProvider, RecaptchaVerifier, signInWithPhoneNumber, signInWithPopup } from "firebase/auth";
-
-import { useEffect, useState } from "react"
-import PhoneInput from "react-phone-input-2";
-import { doc, getDoc, setDoc } from "firebase/firestore"; 
 import BookingForm from "./BookingForm";
 import SignIn from "./SignIn";
 import Register from "./Register";
 import SocialLogin from "./SocialLogin";
+import { useState } from "react";
 
 
 export default function LoginRegistrationCard({lang,dict}) {
-
     const [activeTab, setActiveTab] = useState('signIn');
     const [userName, setUserName] = useState(localStorage.getItem("userName"))
     const [identifier, setIdentifier] = useState(localStorage.getItem("identifier"))
-
-    const currentuser = auth.currentUser;
-    console.log(currentuser)
 
     const handleTabChange = (tab) => {
       setActiveTab(tab);

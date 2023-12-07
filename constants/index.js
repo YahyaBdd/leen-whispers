@@ -230,4 +230,168 @@ export const pricingEn = {
       }
     ]
   }
+
+export const teamMembersEn = [
+  {
+  category: 'Hair',
+  members: [
+  {
+  title: 'Hair Styling Expert',
+  name: 'Fatin',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Ahlam',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Iman',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Manal',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Wafa',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Hoyam',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Reem',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Hair Styling Expert',
+  name: 'Gina',
+  imageUrl: 'flaticon-hairstyle',
+  profileLink: 'artist-details.html',
+  },
+  ],
+  },
+  {
+  category: 'Makeup',
+  members: [
+  {
+  title: 'Makeup Artist',
+  name: 'Wafa',
+  imageUrl: 'flaticon-makeup',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Makeup Artist',
+  name: 'Lina',
+  imageUrl: 'flaticon-makeup',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Makeup Artist',
+  name: 'Zoya',
+  imageUrl: 'flaticon-makeup',
+  profileLink: 'artist-details.html',
+  },
+  ],
+  },
+  {
+  category: 'Nails',
+  members: [
+  {
+  title: 'Nail Artist',
+  name: 'Ahlam',
+  imageUrl: 'flaticon-nail',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Nail Artist',
+  name: 'Roua',
+  imageUrl: 'flaticon-nail',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Nail Artist',
+  name: 'Jessica',
+  imageUrl: 'flaticon-nail',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Nail Artist',
+  name: 'Gina',
+  imageUrl: 'flaticon-nail',
+  profileLink: 'artist-details.html',
+  }
+  ],
+  },
+  {
+  category: 'Massage',
+  members: [
+  {
+  title: 'Massage Specialist',
+  name: 'Jessica',
+  imageUrl: 'flaticon-foot-massage',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Massage Specialist',
+  name: 'Gina',
+  imageUrl: 'flaticon-foot-massage',
+  profileLink: 'artist-details.html',
+  }
+  ],
+  },
+  {
+  category: 'Eyebrows and eyelashes',
+  members: [
+  {
+  title: 'Eyebrows and eyelashes Artist',
+  name: 'Heba',
+  imageUrl: 'flaticon-eyelashes',
+  profileLink: 'artist-details.html',
+  },
+  {
+  title: 'Eyebrows and eyelashes Artist',
+  name: 'Hajar',
+  imageUrl: 'flaticon-eyelashes',
+  profileLink: 'artist-details.html',
+  },
+  ],
+  },
+  {
+  category: 'Body Care',
+  members: [
+  {
+  title: 'Body Care Specialist',
+  name: 'Gina',
+  imageUrl: 'flaticon-facial-treatment',
+  profileLink: 'artist-details.html',
+  },
+  ],
+  },
+  {
+  category: 'Skin Care',
+  members: [
+  {
+  title: 'Skin Care Specialist',
+  name: 'Ghadah',
+  imageUrl: 'flaticon-skin-care',
+  profileLink: 'artist-details.html',
+  },
+  ],
+  },
+  ];  
    
