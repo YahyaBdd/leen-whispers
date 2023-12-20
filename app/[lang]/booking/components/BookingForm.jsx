@@ -272,23 +272,29 @@ export default function BookingForm({ lang, userData }) {
             </div>
             <div className="col-md-12">
               <input
-                type="date"
+                type="text"
                 style={{position:'relative'}}
                 name="date-input"
                 className="form-control date"
                 onChange={(e) => setFormData({...formData, date:e.target.value})}
+                onFocus={(e) => (e.target.type = 'date')}
+                onBlur={(e) => (e.target.type = 'date')}    
+                placeholder="Appointment Date*"  
                 required
               />
               {errors.date === '' ? '' : <p style={{color:'red'}}>{errors.date}</p>}
             </div>
             <div className="col-md-12">
               <input
-                type="time"
+                type="text"
                 name="time-input"
                 style={{position:'relative'}}
                 min="08:00" max="20:00"
                 className="form-control date"
                 onChange={(e) => setFormData({...formData, time:e.target.value})}
+                onFocus={(e) => (e.target.type = 'time')}
+                onBlur={(e) => (e.target.type = 'time')}
+                placeholder="Appointment Time*"
                 required
                 />
               {errors.time === '' ? '' : <p style={{color:'red'}}>{errors.time}</p>}
