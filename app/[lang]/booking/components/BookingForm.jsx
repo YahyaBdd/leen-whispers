@@ -7,6 +7,7 @@ import { useState, useEffect} from "react";
 import PhoneInput from "react-phone-input-2";
 import Appointments from "./Appointments";
 
+
 export default function BookingForm({ lang, userData }) {
 
   const [formData, setFormData] = useState({
@@ -149,7 +150,7 @@ export default function BookingForm({ lang, userData }) {
     selectService: 'Select Service',
     selectStaff: 'Select Staff',
     appointmentDatePlaceholder: 'Appointment Date*',
-    bookButton: 'Or Book Now, and pay in person',
+    bookButton: 'Or Pay In Person',
   };
 
   const contentArabic = {
@@ -160,7 +161,7 @@ export default function BookingForm({ lang, userData }) {
     selectService: 'اختر الخدمة',
     selectStaff: 'اختر الموظف',
     appointmentDatePlaceholder: 'تاريخ الموعد*',
-    bookButton: 'أو احجز الآن وادفع في المكان',
+    bookButton: 'أو ادفع في المكان',
   };
 
   const content = lang === 'ar' ? contentArabic : contentEnglish;
@@ -169,7 +170,7 @@ export default function BookingForm({ lang, userData }) {
 
   return (
     <PayPalScriptProvider options={{ "client-id": "AVnvPk94IsV5Cy1ni1AKtWefOvUU8IFzfaS0oY8Nl9GNELwFG_E61JofyLQWlKS1e_GPOkQ5t3Ca3mWU" }}>
-      
+    <Appointments userName={userData.firstName} identifier={userData.identifier} />
     <div id="booking-1" className="pt-8 pb-7 booking-section division">
       <style>
         {`
@@ -276,7 +277,6 @@ export default function BookingForm({ lang, userData }) {
                 name="date-input"
                 className="form-control date"
                 onChange={(e) => setFormData({...formData, date:e.target.value})}
-                placeholder={content.appointmentDatePlaceholder}
                 required
               />
               {errors.date === '' ? '' : <p style={{color:'red'}}>{errors.date}</p>}
@@ -289,7 +289,6 @@ export default function BookingForm({ lang, userData }) {
                 min="08:00" max="20:00"
                 className="form-control date"
                 onChange={(e) => setFormData({...formData, time:e.target.value})}
-                placeholder={content.appointmentDatePlaceholder}
                 required
                 />
               {errors.time === '' ? '' : <p style={{color:'red'}}>{errors.time}</p>}
@@ -338,7 +337,6 @@ export default function BookingForm({ lang, userData }) {
       </div>{" "}
     </div>{" "}
   </div>
-  <Appointments userName={userData.firstName} identifier={userData.identifier} />
 </PayPalScriptProvider>
   )
 }

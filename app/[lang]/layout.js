@@ -14,7 +14,7 @@ import './styles/lunar.css';
 import './styles/style.css';
 import './styles/responsive.css';
 
-import './globals.css'
+import '../globals.css'
 
 
 import Footer from "@/components/Footer";
