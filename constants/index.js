@@ -267,7 +267,7 @@ export const teamMembersEn = [
   },
   {
   title: 'Hair Styling Expert',
-  name: 'Hoyam',
+  name: 'Hayam',
   imageUrl: 'flaticon-hairstyle',
   profileLink: 'artist-details.html',
   },
@@ -279,7 +279,7 @@ export const teamMembersEn = [
   },
   {
   title: 'Hair Styling Expert',
-  name: 'Gina',
+  name: 'Jane',
   imageUrl: 'flaticon-hairstyle',
   profileLink: 'artist-details.html',
   },
@@ -296,7 +296,7 @@ export const teamMembersEn = [
   },
   {
   title: 'Makeup Artist',
-  name: 'Lina',
+  name: 'leen',
   imageUrl: 'flaticon-makeup',
   profileLink: 'artist-details.html',
   },
@@ -331,7 +331,7 @@ export const teamMembersEn = [
   },
   {
   title: 'Nail Artist',
-  name: 'Gina',
+  name: 'Jane',
   imageUrl: 'flaticon-nail',
   profileLink: 'artist-details.html',
   }
@@ -348,7 +348,7 @@ export const teamMembersEn = [
   },
   {
   title: 'Massage Specialist',
-  name: 'Gina',
+  name: 'Jane',
   imageUrl: 'flaticon-foot-massage',
   profileLink: 'artist-details.html',
   }
@@ -376,7 +376,7 @@ export const teamMembersEn = [
   members: [
   {
   title: 'Body Care Specialist',
-  name: 'Gina',
+  name: 'Jane',
   imageUrl: 'flaticon-facial-treatment',
   profileLink: 'artist-details.html',
   },

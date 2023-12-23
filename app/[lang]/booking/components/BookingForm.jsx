@@ -6,6 +6,7 @@ import { addDoc, collection, doc,setDoc } from "firebase/firestore";
 import { useState, useEffect} from "react";
 import PhoneInput from "react-phone-input-2";
 import Appointments from "./Appointments";
+import Cart from "./Cart";
 
 
 export default function BookingForm({ lang, userData }) {
@@ -21,9 +22,6 @@ export default function BookingForm({ lang, userData }) {
     time: null,
   });
   const [exchangeRate, setExchangeRate] = useState()
-  const setPhoneNumber = (phone) => {
-    setFormData({...formData, phone: phone})
-  }
   const [errors, setErrors] = useState({
     firstName: '',
     lastName: '',
@@ -34,12 +32,16 @@ export default function BookingForm({ lang, userData }) {
     date: '',
     time: '',
   })
+  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("appointment")) || {})
+
+  const setPhoneNumber = (phone) => {
+    setFormData({...formData, phone: phone})
+  }
 
   useEffect(() => {
     fetch('https://openexchangerates.org/api/latest.json?app_id=d8af557bc9e541bb8a2949aa0e8d000c')
       .then(response => response.json())
       .then(data => {
-      console.log(data.rates.SAR);
       setExchangeRate(data.rates.SAR)
       })
       .catch(error => console.error('Error:', error));
@@ -48,35 +50,35 @@ export default function BookingForm({ lang, userData }) {
   
 
   const createAppointment = async (paymentMethod,orderId) => {
-    const data = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      email: formData.email,
-      phone: formData.phone,
-      service: formData.service,
-      staff: formData.staff,
-      date: formData.date,
-      time: formData.time,
-      paymentMethod: paymentMethod,
-      orderId : orderId || ''
-    }
+    // loopr through the appointments in local storage and add them to the database
+    const appointmentCookie = localStorage.getItem("appointment");
+    const appointment = JSON.parse(appointmentCookie);
 
-    await addDoc(collection(db, "appointments"), data);
-    
+    for (const item of appointment) {
+      try {
+        console.log("adding item to db");
+        //if payment method is paypal, add the order id to the appointment
+        if(paymentMethod === 'paypal'){
+          item.orderId = orderId
+        }
+
+        const ref = await addDoc(collection(db, "appointments"), item);
+        console.log("Document written with ID: ", ref.id);
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(validateForm()){
-      try {
-        await createAppointment('in-person')
-        alert("Appointment booked successfully")
-        window.location.reload();
-      } catch (error) {
-        alert("something went wrong, please refresh the pafe and try again ")
-        console.log(error)
-      }
-    } else {
+    try {
+      await createAppointment('in-person')
+      localStorage.removeItem("appointment");
+      alert("Appointment booked successfully")
+      window.location.reload();
+    } catch (error) {
       alert("something went wrong, please refresh the pafe and try again ")
+      console.log(error)
     }
   }
 
@@ -91,9 +93,12 @@ export default function BookingForm({ lang, userData }) {
       errors.lastName = 'Last Name is required'
       valid = false
     }
-    if(!formData.email && !formData.phone){
-      errors.email = 'Email or Phone is required'
-      errors.phone = 'Email or Phone is required'
+    if(!formData.email ){
+      errors.email = 'Email is required'
+      valid = false
+    }
+    if(!formData.phone){
+      errors.phone = 'Phone is required'
       valid = false
     }
     if(!formData.service){
@@ -122,6 +127,7 @@ export default function BookingForm({ lang, userData }) {
     try{
       await createAppointment('paypal',orderId)
       alert("Appointment booked successfully")
+      localStorage.removeItem("appointment");
       window.location.reload();
     } catch (error) {
       alert("something went wrong, please refresh the pafe and try again ")
@@ -140,6 +146,26 @@ export default function BookingForm({ lang, userData }) {
 
   const handleSelectedStaff = (e) => {
     setFormData({...formData, staff:e.target.value})
+  }
+
+  const addAppointment = () => {
+    if(validateForm()){
+      const appointmentCookie = localStorage.getItem("appointment");
+      if(appointmentCookie){
+        // console.log('Existing appointment cookie found');
+        const appointment = JSON.parse(appointmentCookie);
+        appointment.push(formData)
+        localStorage.setItem("appointment", JSON.stringify(appointment));
+        setCartItems(appointment)
+        alert("Service added to cart")
+      } else {
+        // console.log('No appointment cookie found');
+        const appointment = [formData]
+        localStorage.setItem("appointment", JSON.stringify(appointment));
+        setCartItems(appointment)
+        alert("Service added to cart")
+      }
+    }
   }
 
   const contentEnglish = {
@@ -170,7 +196,6 @@ export default function BookingForm({ lang, userData }) {
 
   return (
     <PayPalScriptProvider options={{ "client-id": "AVnvPk94IsV5Cy1ni1AKtWefOvUU8IFzfaS0oY8Nl9GNELwFG_E61JofyLQWlKS1e_GPOkQ5t3Ca3mWU" }}>
-    <Appointments userName={userData.firstName} identifier={userData.identifier} />
     <div id="booking-1" className="pt-8 pb-7 booking-section division">
       <style>
         {`
@@ -191,6 +216,8 @@ export default function BookingForm({ lang, userData }) {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 col-xl-9">
+          <Appointments userName={userData.firstName} identifier={userData.identifier} />
+          <br />
           <form name="bookingform" className="row booking-form" onSubmit={handleSubmit}>
             <div className="col-lg-6">
               <input
@@ -299,35 +326,44 @@ export default function BookingForm({ lang, userData }) {
                 />
               {errors.time === '' ? '' : <p style={{color:'red'}}>{errors.time}</p>}
             </div>
+            <br />
+            <Cart items={cartItems}/>
+            <br />
+            <div className="col-md-12 text-center mb-3">
+              <button
+                type="button"
+                className="btn btn--tra-black hover--black"
+                onClick={addAppointment}
+                >
+                Add Service
+              </button>
+            </div>
             <PayPalButtons
               forceReRender = {[formData.service, formData.staff, formData.date, formData.time]}
               createOrder={(data, actions) => {
-                  return actions.order.create(
-                    { purchase_units: [
-                      {
-                          description:formData.service.description,
-                          amount: {
-                            value: Math.ceil(formData.service.price/exchangeRate),
-                          }
+                  const appointmentCookie = localStorage.getItem("appointment");
+                  const appointment = JSON.parse(appointmentCookie);
+                  const purchase_units = appointment.map((item, index) => {
+                    console.log('price', item.service.price, '|| exchangeRate', exchangeRate)
+                    return {
+                      reference_id: `${Date.now()}${index}`,
+                      description:item.service.description,
+                      amount: {
+                        value: Math.ceil(item.service.price/exchangeRate),
                       }
-                      ]}
+                    }
+                  })
+                  console.log('purchase_units', purchase_units)
+                  return actions.order.create(
+                    { purchase_units: [...purchase_units]}
                   );
               }}
               onApprove={async (data, actions) => {
-              const order = await actions.order.capture(); 
-              console.log("order", order);
-              
-              handleApprove(data.orderID);
+              const order = await actions.order.capture();
+              handleApprove(data.orderID)
               }}
               onError={(err) => {
               console.error("PayPal Checkout onError", err);
-              }}
-              onClick={(data, actions) => {
-                if(validateForm()){
-                  return actions.resolve()
-                } else {
-                  return actions.reject()
-                }
               }}
             />
             <div className="col-md-12 text-center">

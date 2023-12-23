@@ -9,8 +9,8 @@ import { useState } from "react";
 
 export default function LoginRegistrationCard({lang,dict}) {
     const [activeTab, setActiveTab] = useState('signIn');
-    const [userName, setUserName] = useState(localStorage.getItem("userName"))
-    const [identifier, setIdentifier] = useState(localStorage.getItem("identifier"))
+    const [userName, setUserName] = useState(localStorage.getItem("userName")?localStorage.getItem("userName"):'')
+    const [identifier, setIdentifier] = useState(localStorage.getItem("identifier")?localStorage.getItem("identifier"):'')
 
     const handleTabChange = (tab) => {
       setActiveTab(tab);
@@ -34,7 +34,7 @@ export default function LoginRegistrationCard({lang,dict}) {
       {userName ? (
         <>
         <div className="container text-center">
-            <h2>{dict.welcoming.title} {userName}</h2>
+            <h2 className="text-3xl">{dict.welcoming.title} {userName}</h2>
             <p>{dict.welcoming.text}</p>
             <a className="btn btn--tra-black hover--black submit" onClick={removeCookie}>
               {dict.welcoming.button}  
