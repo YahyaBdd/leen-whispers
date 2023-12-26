@@ -6,6 +6,7 @@ import logoBlack from '@/assets/images/logo/Leen-Whispers_gold_high-res-01.png'
 
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react';
+import Cart from './Cart'
 
 export default function NavBar({dict,lang}) {
 
@@ -107,12 +108,11 @@ export default function NavBar({dict,lang}) {
                     </a>
                   </li>
 
-                  <li aria-haspopup="true">
+                  {localStorage.getItem('username') && <li aria-haspopup="true">
                     <a href= {`/${lang}/contact`} style={{letterSpacing:'0px',paddingLeft: "12px", paddingRight : "12px"}}  className="h-link">
                       {dict.contact}
                     </a>
-                  </li>
-
+                  </li>}
                   {/* SIGN UP BUTTON */}
                   <li className="nl-simple" aria-haspopup="true">
                     <a
@@ -122,6 +122,10 @@ export default function NavBar({dict,lang}) {
                     >
                       {dict.booking}
                     </a>
+                    </li>
+                    {/* to delete */}
+                    <li aria-haspopup="true">
+                      <Cart />
                     </li>
                     {/* DROPDOWN SUB MENU */}
                     <li aria-haspopup="true">

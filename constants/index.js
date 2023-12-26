@@ -138,7 +138,8 @@ export const pricingEn = {
           { "price": 250, "description": "Nashi Argan Treatment" },
           { "price": 405, "description": "Trendy Oil Bath" },
           { "price": 1615, "description": "Trendy Package: 4 Sessions + 1 Gift" }
-        ]
+        ],
+        "tags" : ['Hair', 'Skin Care']
       },
       {
         "name": "Hair Coloring",
@@ -153,7 +154,8 @@ export const pricingEn = {
           { "price": 500, "description": "Medium Hair Extensions" },
           { "price": 600, "description": "Long Hair Extensions" },
           { "price": 800, "description": "Very Long Hair Extensions" }
-        ]
+        ],
+        "tags" : ['Hair']
       },
       {
         "name": "Skincare and Nails",
@@ -180,13 +182,15 @@ export const pricingEn = {
           { "price": 460, "description": "Vitamin C Session" },
           { "price": 345, "description": "Regular Skin Cleaning" },
           { "price": 575, "description": "Deep Skin Cleaning" }
-        ]
+        ],
+        "tags" : ['Skin Care', 'Nails']
       },
       {
         "name": "Home Hairstyles",
         "items": [
           { "price": 500, "description": "Home Hair Styling" }
-        ]
+        ],
+        "tags" : ['Hair']
       },
       {
         "name": "Salon Makeup",
@@ -196,7 +200,8 @@ export const pricingEn = {
           { "price": 500, "description": "Wafaa's Makeup" },
           { "price": 500, "description": "Rawida's Makeup" },
           { "price": 700, "description": "Leen's Makeup" }
-        ]
+        ],
+        "tags" : ['Eyebrows and eyelashes','Makeup']
       },
       {
         "name": "Home Makeup",
@@ -206,13 +211,15 @@ export const pricingEn = {
           { "price": 600, "description": "Rawida's Makeup" },
           { "price": 1000, "description": "Leen's Makeup" },
           { "price": 4000, "description": "Leen's Bridal Makeup" }
-        ]
+        ],
+        "tags" : ['Makeup']
       },
       {
         "name": "Bridal Package",
         "items": [
           { "price": 2500, "description": "Makeup + Hairstyling + Manicure", "subDesc": "and Pedicure with Polish" }
-        ]
+        ],
+        "tags" : ['Makeup', 'Hair', 'Nails']
       },
       {
         "name": "Home Care",
@@ -226,7 +233,8 @@ export const pricingEn = {
           { "price": 115, "description": "Leg Waxing" },
           { "price": 115, "description": "Hand Waxing" },
           { "price": 575, "description": "Full Body Waxing" }
-        ]
+        ],
+        "tags" : ['Skin Care','Body Care','Massage' ,'Nails']
       }
     ]
   }
@@ -393,5 +401,28 @@ export const teamMembersEn = [
   },
   ],
   },
-  ];  
-   
+  ];
+  
+  
+// export function getTags(serviceName, subDesc) {
+//   for (const category of pricingEn.categories) {
+//     for (const item of category.items) {
+//       if (item.description === serviceName && (!subDesc || item.subDesc === subDesc)) {
+//         return category.tags || null;
+//       }
+//     }
+//   }
+//   return null;
+// }
+
+export function getTags(serviceName) {
+  for (const category of pricingEn.categories) {
+    for (const item of category.items) {
+      if (item.description === serviceName) {
+        return category.tags || null;
+      }
+    }
+  }
+  return null;
+}
+  

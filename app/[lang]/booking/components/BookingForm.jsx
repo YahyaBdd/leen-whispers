@@ -1,12 +1,12 @@
 'use client'
-import { pricingAr, pricingEn, teamMembersEn } from "@/constants";
+import { pricingAr, pricingEn, teamMembersEn, getTags } from "@/constants";
 import { db } from "@/firebase";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { addDoc, collection, doc,setDoc } from "firebase/firestore";
+import { addDoc, collection} from "firebase/firestore";
 import { useState, useEffect} from "react";
 import PhoneInput from "react-phone-input-2";
 import Appointments from "./Appointments";
-import Cart from "./Cart";
+import AccordionCard from "@/components/AccordionCard";
 
 
 export default function BookingForm({ lang, userData }) {
@@ -33,6 +33,8 @@ export default function BookingForm({ lang, userData }) {
     time: '',
   })
   const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("appointment")) || {})
+  // const [staff, setStaff] = useState([])
+  const [teamMembers, setTeamMembers] = useState([...teamMembersEn]);
 
   const setPhoneNumber = (phone) => {
     setFormData({...formData, phone: phone})
@@ -136,12 +138,24 @@ export default function BookingForm({ lang, userData }) {
   };
 
   const handleSelectedService = (e) => {
-    const srv = e.target.value.split('+')
+    const srv = e.target.value.split('-')
     const data = {
       description: srv[0], 
       price: srv[1]
     }
     setFormData({...formData, service: data})
+    // Get the tags from the service description
+    const tags = getTags(srv[0]);
+
+    const filteredTeamMembers = teamMembersEn.filter((category) => {
+      // Check if the category.category is in tags
+      const hasCategory = tags.some((tag) =>
+        category.category.toLowerCase().includes(tag.toLowerCase())
+      );
+      return hasCategory;
+    });
+    // Update the team members state with the filtered members
+    setTeamMembers(filteredTeamMembers);
   }
 
   const handleSelectedStaff = (e) => {
@@ -273,7 +287,7 @@ export default function BookingForm({ lang, userData }) {
                 {services.categories.map((category, index) => (
                   <optgroup key={index} label={category.name} style={{color:'black'}}>
                     {category.items.map((item, i) => (
-                      <option key={i} value={`${item.description}+${item.price}`}>
+                      <option key={i} value={`${item.description}-${item.price}`}>
                         {item.description} - {item.price} ˢᵃʳ
                       </option>
                     ))}
@@ -285,7 +299,7 @@ export default function BookingForm({ lang, userData }) {
             <div className="col-lg-6">
               <select name="staff" className="form-select staff" aria-label="Staff Select" onChange={handleSelectedStaff} >
                 <option value="">{content.selectStaff}</option> 
-                {teamMembersEn.map((category, index) => (
+                {teamMembers.map((category, index) => (
                   <optgroup key={index} label={category.category} style={{color:'black'}}>
                     {category.members.map((member, i) => (
                       <option key={i} value={member.name}>
@@ -327,7 +341,7 @@ export default function BookingForm({ lang, userData }) {
               {errors.time === '' ? '' : <p style={{color:'red'}}>{errors.time}</p>}
             </div>
             <br />
-            <Cart items={cartItems}/>
+            <AccordionCard title="Your Reservations" data={cartItems} emptyMsg="No Reservations Available"/>
             <br />
             <div className="col-md-12 text-center mb-3">
               <button
