@@ -1,4 +1,4 @@
-import Team from "@/app/[lang]/team/components/Team";
+import Team from "@/app/[lang]/(root)/team/components/Team";
 import WorkingHours from "@/components/WorkingHours";
 import Gallery from "@/components/Gallery";
 import { getDictionary } from "@/get-dictionary";

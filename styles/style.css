@@ -1,7 +1,7 @@
 /* 29LT Bukra Bold Italic */
 @font-face {
 font-family: 'BukraBoldItalic';
-src: url('../../../assets/fonts/EN/29ltbukra-bold-italic.otf') format('opentype');
+src: url('../assets/fonts/EN/29ltbukra-bold-italic.otf') format('opentype');
 font-weight: bold;
 font-style: italic;
 }
@@ -9,7 +9,7 @@ font-style: italic;
 /* ArbFONTS Bukra Light */
 @font-face {
 font-family: 'BukraLight';
-src: url('../../../assets/fonts/EN/ArbFONTS-bukra-light.ttf') format('truetype');
+src: url('../assets/fonts/EN/ArbFONTS-bukra-light.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
@@ -17,7 +17,7 @@ font-style: normal;
 /* ArbFONTS Bukra Regular */
 @font-face {
 font-family: 'BukraRegular';
-src: url('../../../assets/fonts/EN/ArbFONTS-bukra-regular.ttf') format('truetype');
+src: url('../assets/fonts/EN/ArbFONTS-bukra-regular.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
@@ -26,7 +26,7 @@ font-style: normal;
 /* Regular (Light) */
 @font-face {
   font-family: 'DINNextLight';
-  src: url('../../../assets/fonts/AR/din-next-lt-w23-light.ttf') format('truetype');
+  src: url('../assets/fonts/AR/din-next-lt-w23-light.ttf') format('truetype');
   font-weight: bold;
   font-style: bold;
   }
@@ -34,7 +34,7 @@ font-style: normal;
   /* Medium */
   @font-face {
   font-family: 'DINNextMedium';
-  src: url('../../../assets/fonts/AR/din-next-lt-w23-medium.ttf') format('truetype');
+  src: url('../assets/fonts/AR/din-next-lt-w23-medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   }
@@ -42,7 +42,7 @@ font-style: normal;
   /* Ultra Light */
   @font-face {
   font-family: 'DINNextUltraLight';
-  src: url('../../../assets/fonts/AR/din-next-lt-w23-ultra-light.ttf') format('truetype');
+  src: url('../assets/fonts/AR/din-next-lt-w23-ultra-light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   }
@@ -50,7 +50,7 @@ font-style: normal;
   /* Bold */
   @font-face {
   font-family: 'DINNextBold';
-  src: url('../../../assets/fonts/AR/DIN-NEXT™-ARABIC-BOLD.otf') format('truetype');
+  src: url('../assets/fonts/AR/DIN-NEXT™-ARABIC-BOLD.otf') format('truetype');
   font-weight: bold;
   font-style: bold;
   }
@@ -309,12 +309,12 @@ section,
   background-size: cover;
 }
 
-.bg--01 { background-image: url(../../../assets/images/bg-01.jpg); }
-.bg--02 { background-image: url(../../../assets/images/bg-02.jpg); }
-.bg--03 { background-image: url(../../../assets/images/bg-03.jpg); }
-.bg--04 { background-image: url(../../../assets/images/bg-04.jpg); }
-.bg--05 { background-image: url(../../../assets/images/bg-05.jpg); }
-.bg--06 { background-image: url(../../../assets/images/bg-06.jpg); }
+.bg--01 { background-image: url(../assets/images/bg-01.jpg); }
+.bg--02 { background-image: url(../assets/images/bg-02.jpg); }
+.bg--03 { background-image: url(../assets/images/bg-03.jpg); }
+.bg--04 { background-image: url(../assets/images/bg-04.jpg); }
+.bg--05 { background-image: url(../assets/images/bg-05.jpg); }
+.bg--06 { background-image: url(../assets/images/bg-06.jpg); }
 
 
 
@@ -2114,7 +2114,7 @@ p.tra-link a:hover:after {
 #hero-9 {
   text-align: center;
   position: relative;
-  background-image: url(../../../assets/images/hero-9.jpg);
+  background-image: url(../assets/images/hero-9.jpg);
   padding-top: 220px;
   padding-bottom: 150px;
 }
@@ -2148,7 +2148,7 @@ p.tra-link a:hover:after {
 
 #hero-10 {
   position: relative;
-  background-image: url(../../../assets/images/hero-10.jpg);
+  background-image: url(../assets/images/hero-10.jpg);
   padding-top: 200px;
   padding-bottom: 100px;
 }
@@ -2189,7 +2189,7 @@ p.tra-link a:hover:after {
 
 #hero-11 {
   position: relative;
-  background-image: url(../../../assets/images/hero-11.jpg);
+  background-image: url(../assets/images/hero-11.jpg);
   padding-top: 210px;
   padding-bottom: 120px;
 }
@@ -3899,22 +3899,22 @@ td.text-end {
   ========================================================================== */
 
 .banner-1-wrapper {
-  background-image: url(../../../assets/images/banner-1.jpg);
+  background-image: url(../assets/images/banner-1.jpg);
   padding: 90px 80px;
 }
 
 .banner-1-wrapper.banner-1-hair {
-  background-image: url(../../../assets/images/banner-1-hair.jpg);
+  background-image: url(../assets/images/banner-1-hair.jpg);
 }
 
 .banner-3 {
-  /* background-image: url(../../../assets/images/banner-3.html); */
+  /* background-image: url(../assets/images/banner-3.html); */
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
 .banner-4 {
-  /* background-image: url(../../../assets/images/banner-4.html); */
+  /* background-image: url(../assets/images/banner-4.html); */
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -3930,12 +3930,12 @@ td.text-end {
 
 .banner-5-wrapper.bg--img.bg--black,
 .banner-6-wrapper.bg--img.bg--black {
-  /* background-image: url(../../../assets/images/banner-bg-black.html); */
+  /* background-image: url(../assets/images/banner-bg-black.html); */
 }
 
 .banner-5-wrapper.bg--img.bg--beige,
 .banner-6-wrapper.bg--img.bg--beige {
-  /* background-image: url(../../../assets/images/banner-bg-beige.html); */
+  /* background-image: url(../assets/images/banner-bg-beige.html); */
 }
 
 .banner-5 .left-column,
@@ -4144,7 +4144,7 @@ td.text-end {
 }
 
 .newsletter-wrapper.bg--img {
-  background: url(../../../assets/images/newsletter.jpg); 
+  background: url(../assets/images/newsletter.jpg); 
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;   
@@ -5500,35 +5500,35 @@ select:-webkit-autofill:focus {
 }
 
 #about-page.inner-page-hero {
-  background-image: url(../../../assets/images/interior-01.jpeg);
+  background-image: url(../assets/images/interior-01.jpeg);
 }
 
 #booking-page.inner-page-hero {
-  background-image: url(../../../assets/images/interior-07.jpeg);
+  background-image: url(../assets/images/interior-07.jpeg);
 }
 
 #faqs-page.inner-page-hero {
-  background-image: url(../../../assets/images/interior-12.jpeg);
+  background-image: url(../assets/images/interior-12.jpeg);
 }
 
 #gift-page.inner-page-hero {
-  background-image: url(../../../assets/images/gift-page.jpg);
+  background-image: url(../assets/images/gift-page.jpg);
 }
 
 #pricing-page-1.inner-page-hero {
-  background-image: url(../../../assets/images/interior-14.jpeg);
+  background-image: url(../assets/images/interior-14.jpeg);
 }
 
 #pricing-page-2.inner-page-hero {
-  background-image: url(../../../assets/images/pricing-2-page.jpg);
+  background-image: url(../assets/images/pricing-2-page.jpg);
 }
 
 #reviews-page.inner-page-hero {
-  background-image: url(../../../assets/images/reviews-page.jpg);
+  background-image: url(../assets/images/reviews-page.jpg);
 }
 
 #team-page.inner-page-hero {
-  background-image: url(../../../assets/images/interior-04.jpeg);
+  background-image: url(../assets/images/interior-04.jpeg);
 }
 
 /*------------------------------------------*/
@@ -5662,20 +5662,20 @@ select:-webkit-autofill:focus {
 }
 
 #modal-2.modal .bg-img {
-  background: url(../../../assets/images/modal.jpg);
+  background: url(../assets/images/modal.jpg);
   background-position: left center;  
 }
 
 #modal-2.modal_barber .bg-img {
-  background: url(../../../assets/images/modal_barber.jpg); 
+  background: url(../assets/images/modal_barber.jpg); 
 }
 
 #modal-2.modal_hair .bg-img {
-  background: url(../../../assets/images/modal_hair.jpg); 
+  background: url(../assets/images/modal_hair.jpg); 
 }
 
 #modal-2.modal_nail .bg-img {
-  /* background: url(../../../assets/images/modal_nail.html);  */
+  /* background: url(../assets/images/modal_nail.html);  */
 }
 
 #modal-2 .modal-body-content {
@@ -5852,7 +5852,7 @@ select:-webkit-autofill:focus {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  background-image: url(../../../assets/images/back-to-top.png);
+  background-image: url(../assets/images/back-to-top.png);
   background-repeat: no-repeat;
   background-position: 50% 48%;
   background-color: rgba(10, 10, 10, .25);
