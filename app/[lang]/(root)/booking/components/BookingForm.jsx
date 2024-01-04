@@ -33,7 +33,7 @@ export default function BookingForm({ lang, userData }) {
     time: '',
   })
   const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("appointment")) || {})
-  // const [staff, setStaff] = useState([])
+
   const [teamMembers, setTeamMembers] = useState([...teamMembersEn]);
 
   const setPhoneNumber = (phone) => {

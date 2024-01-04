@@ -2,6 +2,7 @@ import Script from 'next/script';
 
 import '@/styles/bootstrap.min.css'
 
+
 import '@/styles/flaticon.css';
 import '@/styles/menu.css';
 import '@/styles/dropdown-effects/fade-down.css';
