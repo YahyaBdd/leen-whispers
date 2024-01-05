@@ -8,6 +8,19 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { db } from "@/firebase";
+import { deleteDoc, doc } from "firebase/firestore";
+
+const handleDelete = async (reviewId) => {
+  try {
+    await deleteDoc(doc(db, "reviews", reviewId));
+    alert('Review deleted successfully');
+    window.location.reload();
+  } catch (error) {
+    alert('Error deleting Review:', error);
+    window.location.reload();
+  }
+};
 
 export default function Reviews({reviews}) {
 
@@ -17,22 +30,30 @@ export default function Reviews({reviews}) {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>comment</TableHead>
-            <TableHead>member</TableHead>
-            <TableHead>rating</TableHead>
+            <TableHead>Client</TableHead>
+            <TableHead>Contact</TableHead> 
+            <TableHead>Service</TableHead>
+            <TableHead>Staff</TableHead>
+            <TableHead>Review</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {reviews && Object.keys(reviews).map((reviewId, index) => (
-            <TableRow key={index}>
-              <TableCell>{reviews[reviewId].comment}</TableCell>
-              <TableCell>{reviews[reviewId].member}</TableCell>
-              <TableCell>{reviews[reviewId].rating}</TableCell>
+          {reviews && Object.keys(reviews).map((reviewId, index) => {
+            const fullName = `${reviews[reviewId].firstName} ${reviews[reviewId].lastName}`;
+
+            return (
+              <TableRow key={index}>
+              <TableCell>{fullName}</TableCell>
+              <TableCell>{reviews[reviewId].email}</TableCell>
+              <TableCell>{reviews[reviewId].service.description}</TableCell>
+              <TableCell>{reviews[reviewId].staff}</TableCell>
+              <TableCell>{reviews[reviewId].review}</TableCell>
               <TableCell className="text-left">
                 <Button variant="outline" onClick={() => handleDelete(reviewId)}>Delete</Button>
               </TableCell>  
             </TableRow>
-          ))}
+            )
+            })}
         </TableBody>
       </Table>
     </div>
