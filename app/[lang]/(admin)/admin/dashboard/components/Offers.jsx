@@ -31,6 +31,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { Scroll } from "lucide-react"
+import { ScrollArea } from "@/components/ui/scroll-area"
   
 const handleSubmit = async (offerType, offerTitle, offerDescription, clientId, discount) => {
   try {
@@ -76,9 +78,9 @@ function Offers({offers}) {
   const [discount, setDiscount] = useState('');
 
   return (
-    <div>
-      <h1>Offers</h1>
-      <Table>
+    <div >
+      <h3 className="text-xl font-bold tracking-tight py-6 pl-10">Offers list</h3>
+      <Table >
         <TableHeader>
           <TableRow>
             <TableHead>Offer Type</TableHead>
@@ -106,7 +108,7 @@ function Offers({offers}) {
                 </>
               )}
               <TableCell className="text-left">
-                <Button variant="outline" onClick={() => handleDelete(offerId)}>Delete</Button>
+                <Button variant="outline" onClick={() => handleDelete(offerId)} className="bg-red-600 text-white">Delete</Button>
               </TableCell>  
             </TableRow>
           ))}
@@ -114,7 +116,7 @@ function Offers({offers}) {
       </Table>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">New Offer</Button>
+          <Button variant="outline" className="bg-green-600 text-white">New Offer</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

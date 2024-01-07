@@ -1,5 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Table,
   TableBody,
@@ -26,7 +27,7 @@ export default function Reviews({reviews}) {
 
   return (
     <div>
-      <h1>Offers</h1>
+      <h3 className="text-xl font-bold tracking-tight py-6 pl-10">Reviews list</h3>
       <Table>
         <TableHeader>
           <TableRow>
@@ -49,7 +50,7 @@ export default function Reviews({reviews}) {
               <TableCell>{reviews[reviewId].staff}</TableCell>
               <TableCell>{reviews[reviewId].review}</TableCell>
               <TableCell className="text-left">
-                <Button variant="outline" onClick={() => handleDelete(reviewId)}>Delete</Button>
+                <Button className="bg-red-600 text-white" variant="outline" onClick={() => handleDelete(reviewId)}>Delete</Button>
               </TableCell>  
             </TableRow>
             )

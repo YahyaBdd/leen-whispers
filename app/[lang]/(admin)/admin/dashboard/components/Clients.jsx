@@ -4,12 +4,12 @@ import { utils, writeFile } from 'xlsx';
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import { Button } from '@/components/ui/button';
 
 function Clients({users}) {
 
@@ -32,27 +32,32 @@ function Clients({users}) {
 
   return (
     <div>
-              <Table>
-        <TableCaption>A list of your recent users.</TableCaption>
+        <div className="flex flex-col sm:flex-row justify-between">
+      <h3 className="text-xl font-bold tracking-tight py-6 pl-10 sm:py-3">Clients list</h3>
+      <Button variant="outline" onClick={downloadUsers} className="bg-green-600 text-white p-3 m-2">Download Clients</Button>
+      </div>
+        <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Full Name</TableHead>
-            <TableHead>uid</TableHead>
-            <TableHead>Phone Number</TableHead>
-            <TableHead>Email</TableHead>
+            <TableHead className="text-center">Full Name</TableHead>
+            <TableHead className="text-center">uid</TableHead>
+            <TableHead className="text-center">Phone Number</TableHead>
+            <TableHead className="text-center">Email</TableHead>
           </TableRow>
         </TableHeader>
+        {/* <ScrollArea> */}
         <TableBody>
           {users &&
             Object.keys(users).map((user, index) => (
               <TableRow key={index}>
-                <TableCell>{users[user].fullName}</TableCell>
-                <TableCell>{users[user].uid}</TableCell>
-                <TableCell>{users[user].phoneNumber || ''}</TableCell>
-                <TableCell>{users[user].email || ''}</TableCell>
+                <TableCell className="text-center">{users[user].fullName}</TableCell>
+                <TableCell className="text-center">{users[user].uid}</TableCell>
+                <TableCell className="text-center">{users[user].phoneNumber || '--'}</TableCell>
+                <TableCell className="text-center">{users[user].email || '--'}</TableCell>
               </TableRow>
             ))}
         </TableBody>
+        {/* </ScrollArea> */}
       </Table>
     </div>
   )

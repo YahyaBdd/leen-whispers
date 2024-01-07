@@ -1,3 +1,4 @@
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
     Table,
     TableBody,
@@ -10,6 +11,7 @@ import {
 function Appointments({appointments}) {
   return (
 <div>
+    <h3 className="text-xl font-bold tracking-tight py-6 pl-10">Appointments list</h3>
     <Table>
       <TableCaption>A list of your recent appointments.</TableCaption>
       <TableHeader>
