@@ -13,7 +13,6 @@ function Appointments({appointments}) {
 <div>
     <h3 className="text-xl font-bold tracking-tight py-6 pl-10">Appointments list</h3>
     <Table>
-      <TableCaption>A list of your recent appointments.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead>Full Name</TableHead>
@@ -38,7 +37,7 @@ function Appointments({appointments}) {
                 <TableCell>{appointments[appointmentId].service.description}</TableCell>
                 <TableCell>{appointments[appointmentId].service.price}</TableCell>
                 <TableCell>{appointments[appointmentId].staff}</TableCell>
-                <TableCell>{appointments[appointmentId].phone}</TableCell>
+                <TableCell>{`+${appointments[appointmentId].phone}`}</TableCell>
                 <TableCell>{appointments[appointmentId].email}</TableCell>
               </TableRow>
             );
