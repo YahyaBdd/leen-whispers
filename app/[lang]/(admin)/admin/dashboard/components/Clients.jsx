@@ -52,7 +52,7 @@ function Clients({users}) {
               <TableRow key={index}>
                 <TableCell className="text-center">{users[user].fullName}</TableCell>
                 <TableCell className="text-center">{users[user].uid}</TableCell>
-                <TableCell className="text-center">{users[user].phoneNumber || '--'}</TableCell>
+                <TableCell className="text-center">{users[user].phoneNumber ? `+${users[user].phoneNumber}` : '--'}</TableCell>
                 <TableCell className="text-center">{users[user].email || '--'}</TableCell>
               </TableRow>
             ))}
