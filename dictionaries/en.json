@@ -41,7 +41,7 @@
     "location": {
       "title": "Our Location",
       "salonName": "Leen Whispers",
-      "address": "6305 Abi Dajanah, Al Mursilat, Riyadh 12461, Saudi Arabia"
+      "address": "6305 Abi Dujana, Al Murasalat, Riyadh 12461, Saudi Arabia"
     },
     "getInTouch": {
       "title": "Get in Touch",
@@ -89,7 +89,7 @@
   "location" : {
     "sectionTitle": "Our Location",
     "welcomeTitle": "Welcome to Leen Whispers",
-    "address": "6305 Abi Dajanah, Al Mursilat, Riyadh 12461, Saudi Arabia",
+    "address": "6305 Abi Dujana, Al Murasalat, Riyadh 12461, Saudi Arabia",
     "advantages": [
       {
         "label": "Learn More",
@@ -195,7 +195,7 @@
     "location": {
       "title": "Our Location:",
       "address": [
-        "6305 Abi Dajanah, Al Mursilat,",
+        "6305 Abi Dujana, Al Murasalat,",
         " Riyadh 12461, Saudi Arabia"
       ],
       "contacts": [
