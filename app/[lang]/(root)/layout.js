@@ -39,7 +39,7 @@ export default async function RootLayout({ children, params }) {
       <NewsLetter dict={dictionary["newsletter"]}/>
       <Instagram dict={dictionary["instagram"]} />
       <Footer dict={dictionary["footer"]}/>
-      <Script src="/js/jquery-3.7.0.min.js" strategy="lazyOnload"/>
+      <Script src="/js/jquery-3.7.0.min.js" strategy="afterInteractive"/>
       <Script src="/js/bootstrap.min.js" strategy="lazyOnload" />
       <Script src="/js/menu.js" strategy="lazyOnload" />
       <Script src="/js/tweenmax.min.js" strategy="lazyOnload" /> 
