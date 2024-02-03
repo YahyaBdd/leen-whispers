@@ -16,13 +16,13 @@ export default function PricingMenu({ lang }) {
             <ItemPricingList item={pricing.categories[0]} />
             <br />
             <hr />
-            <ItemPricingList item={pricing.categories[1]} />
+            <ItemPricingList item={pricing.categories[2]} />
+            <br />
+            <hr />
+            <ItemPricingList item={pricing.categories[4]} />
             <br />
             <hr />
             <ItemPricingList item={pricing.categories[3]} />
-            <br />
-            <hr />
-            <ItemPricingList item={pricing.categories[5]} />
 
           </div>
         </div>{" "}
@@ -30,16 +30,16 @@ export default function PricingMenu({ lang }) {
         {/* PRICING-1 TABLE */}
         <div className="col-lg-6">
           <div className="pricing-5-table right-column">
-            <ItemPricingList item={pricing.categories[2]} />
+            <ItemPricingList item={pricing.categories[1]} />
             <br />
             <hr />
-            <ItemPricingList item={pricing.categories[4]} />
-            <br />
-            <hr />
-            <ItemPricingList item={pricing.categories[6]} />
+            <ItemPricingList item={pricing.categories[5]} />
             <br />
             <hr />
             <ItemPricingList item={pricing.categories[7]} />
+            <br />
+            <hr />
+            <ItemPricingList item={pricing.categories[6]} />
 
           </div>
         </div>{" "}
