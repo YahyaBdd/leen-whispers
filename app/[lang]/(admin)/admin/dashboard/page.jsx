@@ -11,16 +11,11 @@ function page() {
   useEffect(() => {
     admin = localStorage.getItem('admin')
     timeStamp = localStorage.getItem('timeStamp') > Date.now()- 3600000
-    console.log(admin,timeStamp)
   }, [])
 
   return (
     <>
-    {/* <div className="container mx-auto px-4 w-screen"> */}
-    {/* <div className="container mx-auto px-4 w-screen"> */}
-        <Dashboard admin={admin} timeStamp={timeStamp}/>
-    {/* </div>   */}
-    {/* </div>   */}
+      <Dashboard admin={admin} timeStamp={timeStamp}/>
     </>
   )
 }

@@ -8,15 +8,11 @@ export default function PayWithPaypal({srv}) {
   let price = ''
 
   useEffect(() => {
-    console.log("****** PayPal Checkout useEffect ******");
-    console.log("****** Before setting up the variables ******, description: ", description, ", price: ", price);
     description = srv.description;
     price = srv.price;
-    console.log("****** After setting up the variables ******, description: ", description, ", price: ", price);
   }, [srv])
   
   const handleCreateOrder = (data, actions) => {
-    console.log("PayPal Checkout handleCreateOrder", "description: ", description, "price: ", price);
     return actions.order.create({
     purchase_units: [
     {
@@ -33,8 +29,7 @@ export default function PayWithPaypal({srv}) {
         style = {{disableMaxWidth: true}}
         createOrder={handleCreateOrder}
         onApprove={async (data, actions) => {
-        const order = await actions.order.capture(); 
-        console.log("order", order);
+        const order = await actions.order.capture();
         
         handleApprove(data.orderID);
         }}

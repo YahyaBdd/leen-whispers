@@ -14,7 +14,6 @@ export default function SignIn({dict}) {
         const docSnap = await getDoc(doc(db, "users", phoneNumber));
         if (docSnap.exists() && docSnap.data().pwd === pwd) {
             const result = docSnap.data();
-            console.log("signed in the following user:", docSnap.data());
             localStorage.setItem("userName", result.fullName);
             localStorage.setItem("identifier", result.phoneNumber);
             window.location.reload();
