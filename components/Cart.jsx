@@ -5,9 +5,9 @@ import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function Cart() {
+function Cart({mode}) {
   const [show, setShow] = useState(false);
-  const [iconColor, setIconColor] = useState('#ffffff');
+  const [iconColor, setIconColor] = useState(localStorage.getItem("theme") === "light" ? '#353f4f' : '#ffffff');
 
   const theme = localStorage.getItem("theme");
   const items = JSON.parse(localStorage.getItem("appointment")) || {};
@@ -38,6 +38,11 @@ function Cart() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []); // No dependencies to avoid eslint warnings
+
+  useEffect(() => {
+    setIconColor(mode === "light" ? '#353f4f' : '#ffffff');
+  }
+  , [mode]);
 
   return (
     <>
