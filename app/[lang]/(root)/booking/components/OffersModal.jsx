@@ -19,6 +19,8 @@ export default function DiscountModal({offers}) {
             }, 7000)
         }
     }, [])
+
+    console.log(offers[localStorage.getItem('identifier')], localStorage.getItem('identifier'))
     
   return (
     <>

@@ -55,6 +55,7 @@ export default function Register({dict}) {
         })
         .catch((error) => {
         setErrors("invalid phone number");
+        console.log(error.message);
         });
     }
   

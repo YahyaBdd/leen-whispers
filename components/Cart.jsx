@@ -16,12 +16,14 @@ function Cart({mode}) {
   const handleShow = () => setShow(true);
 
   const handleScroll = () => {
+    console.log("scroll");
     const scrollPosition = window.scrollY;
     const threshold = 100;
 
     // Change color based on scroll position
     if (scrollPosition > threshold && theme === "light") {
       setIconColor('#353f4f'); // Dark theme color
+      console.log("dark");
     }else if (scrollPosition <= threshold && theme === "light") {
       setIconColor('#ffffff');
     } 

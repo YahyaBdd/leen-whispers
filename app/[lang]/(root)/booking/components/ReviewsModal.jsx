@@ -16,6 +16,7 @@ export default function ReviewsModal({offers}) {
     const [review, setReview] = useState('')
 
     async function getAppointments(identifier) {
+        console.log("triggered")
         try {
           let q;
           if(identifier.includes('@')) {
@@ -40,8 +41,10 @@ export default function ReviewsModal({offers}) {
                 passedAppointments.push(data);
             }
           });
+          console.log("passed",passedAppointments)
 
           setApp(passedAppointments)
+          console.log("passed",passedAppointments)
 
         } catch (error) {
           console.log(error)
@@ -59,6 +62,7 @@ export default function ReviewsModal({offers}) {
             await  setDoc(doc(db, "reviews", reviewedApp.id), item)
             await  setDoc(doc(db, "appointments", reviewedApp.id), {reviewed: true}, {merge: true})
             document.getElementById('reviews-modal').style.display='none'
+            console.log("Document written with ID: ", reviewedApp.id);
             alert("Thanks for submitting your review!")
         } catch (e) {
             console.error("Error adding document: ", e);
@@ -67,6 +71,7 @@ export default function ReviewsModal({offers}) {
       
 
     useEffect(() => {
+        console.log(localStorage.getItem('identifier'))
         getAppointments(localStorage.getItem('identifier'))
         
     }, [])
@@ -80,6 +85,7 @@ export default function ReviewsModal({offers}) {
                 const modal = document.getElementById('reviews-modal').querySelector("#modal-2");
                 modal.style.setProperty('transition', 'display 0.5s ease');
                 modal.style.setProperty('display', 'block', 'important');
+                console.log(app);
             }, 10000);
         }
     }, [app]);
