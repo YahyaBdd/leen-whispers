@@ -1,5 +1,5 @@
 'use client'
-import { newPricingAr, newPricingEn, teamMembersEn, getTags } from "@/constants";
+import { newPricingAr, newPricingEn, teamMembersEn, teamMembersAr , getTags } from "@/constants";
 import { db } from "@/firebase";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { addDoc, collection} from "firebase/firestore";
@@ -10,8 +10,6 @@ import AccordionCard from "@/components/AccordionCard";
 
 
 export default function BookingForm({ lang, userData }) {
-  console.log('lang', lang)
-
 
   const [formData, setFormData] = useState({
     firstName: userData?.firstName || '',
@@ -36,7 +34,7 @@ export default function BookingForm({ lang, userData }) {
   })
   const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("appointment")) || {})
 
-  const [teamMembers, setTeamMembers] = useState([...teamMembersEn]);
+  const [teamMembers, setTeamMembers] = useState(lang === 'ar' ? [...teamMembersAr] : [...teamMembersEn]);
 
   const setPhoneNumber = (phone) => {
     setFormData({...formData, phone: phone})
@@ -152,7 +150,9 @@ export default function BookingForm({ lang, userData }) {
     const tags = getTags(srv[0], lang);
     console.log('tags', tags)
 
-    const filteredTeamMembers = teamMembersEn.filter((category) => {
+    const team = lang === 'ar' ? teamMembersAr : teamMembersEn;
+
+    const filteredTeamMembers = team.filter((category) => {
       // Check if the category.category is in tags
       const hasCategory = tags.some((tag) =>
         category.category.toLowerCase().includes(tag.toLowerCase())

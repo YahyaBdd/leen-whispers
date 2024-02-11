@@ -999,18 +999,166 @@ export const teamMembersEn = [
   ],
   },
   ];
-  
-  
-// export function getTags(serviceName, subDesc) {
-//   for (const category of pricingEn.categories) {
-//     for (const item of category.items) {
-//       if (item.description === serviceName && (!subDesc || item.subDesc === subDesc)) {
-//         return category.tags || null;
-//       }
-//     }
-//   }
-//   return null;
-// }
+
+
+export const teamMembersAr = [
+    {
+    category: 'Hair',
+    members: [
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'فاتن',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'احلام',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'منال',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'وفا',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'هيام',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'ريم',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html', 
+    },
+    {
+    title: 'أخصائية تصفيف الشعر',
+    name: 'جين',
+    imageUrl: 'flaticon-hairstyle',
+    profileLink: 'artist-details.html',
+    },
+    ],
+    },
+    {
+    category: 'Makeup',
+    members: [
+    {
+    title: 'أخصائية مايك اب',            
+    name: 'وفا',
+    imageUrl: 'flaticon-makeup',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية مايك اب',
+    name: 'لين',
+    imageUrl: 'flaticon-makeup',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية مايك اب',
+    name: 'زويا',
+    imageUrl: 'flaticon-makeup',
+    profileLink: 'artist-details.html',
+    },
+    ],
+    },
+    {
+    category: 'Nails',
+    members: [
+    {
+    title: 'أخصائية الاظافر',
+    name: 'احلام',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية الاظافر',
+    name: 'روعة',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية الاظافر',
+    name: 'جيسيكا',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية الاظافر',
+    name: 'جين',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
+    }
+    ],
+    },
+    {
+    category: 'Massage',
+    members: [
+    {
+    title: 'أخصائية مساج',
+    name: 'جيسيكا',
+    imageUrl: 'flaticon-foot-massage',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية مساج',
+    name: 'جين',
+    imageUrl: 'flaticon-foot-massage',
+    profileLink: 'artist-details.html',
+    }
+    ],
+    },
+    {
+    category: 'Body Care',
+    members: [
+    {
+    title: 'أخصائية العناية بالجسم',
+    name: 'جين',
+    imageUrl: 'flaticon-facial-treatment',
+    profileLink: 'artist-details.html',
+    },
+    ],
+    },
+    {
+    category: 'Eyebrows and eyelashes',
+    members: [
+    {
+    title: 'أخصائية الحواجب والرموش',
+    name: 'هاجر',
+    imageUrl: 'flaticon-eyelashes',
+    profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية الحواجب والرموش',
+    name: 'هبة',
+    imageUrl: 'flaticon-eyelashes',
+    profileLink: 'artist-details.html',
+    },
+    ],
+    },
+    {
+    category: 'Skin Care',
+    members: [
+    {
+    title: 'أخصائية العناية بالبشرة',
+    name: 'غادة',
+    imageUrl: 'flaticon-skin-care',
+    profileLink: 'artist-details.html',
+    },
+    ],
+    },
+    ];
+
 
 export function getTags(serviceName, lang) {
   const pricing = lang === 'ar' ? newPricingAr : newPricingEn;
