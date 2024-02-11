@@ -1,5 +1,5 @@
 'use client'
-import { pricingAr, pricingEn, teamMembersEn, getTags } from "@/constants";
+import { newPricingAr, newPricingEn, teamMembersEn, getTags } from "@/constants";
 import { db } from "@/firebase";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { addDoc, collection} from "firebase/firestore";
@@ -10,6 +10,8 @@ import AccordionCard from "@/components/AccordionCard";
 
 
 export default function BookingForm({ lang, userData }) {
+  console.log('lang', lang)
+
 
   const [formData, setFormData] = useState({
     firstName: userData?.firstName || '',
@@ -138,14 +140,17 @@ export default function BookingForm({ lang, userData }) {
   };
 
   const handleSelectedService = (e) => {
+    console.log('e.target.value', e.target.value)
     const srv = e.target.value.split('-')
     const data = {
       description: srv[0], 
       price: srv[1]
     }
+    console.log('data', data)
     setFormData({...formData, service: data})
     // Get the tags from the service description
-    const tags = getTags(srv[0]);
+    const tags = getTags(srv[0], lang);
+    console.log('tags', tags)
 
     const filteredTeamMembers = teamMembersEn.filter((category) => {
       // Check if the category.category is in tags
@@ -206,7 +211,7 @@ export default function BookingForm({ lang, userData }) {
 
   const content = lang === 'ar' ? contentArabic : contentEnglish;
 
-  const services = lang === 'ar' ? pricingAr : pricingEn;
+  const services = lang === 'ar' ? newPricingAr : newPricingEn;
 
   return (
     <PayPalScriptProvider options={{ "client-id": "AVnvPk94IsV5Cy1ni1AKtWefOvUU8IFzfaS0oY8Nl9GNELwFG_E61JofyLQWlKS1e_GPOkQ5t3Ca3mWU" }}>
