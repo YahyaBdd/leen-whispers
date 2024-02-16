@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import woman_04 from "@/assets/images/model-01.jpeg"; // To change with
+import woman_04 from "@/assets/images/model-01.jpeg";
 import woman_01 from "@/assets/images/gallery/woman_01.jpg";
 import woman_03 from "@/assets/images/gallery/woman_03.jpg";
 import woman_02 from "@/assets/images/model-02.jpeg";
