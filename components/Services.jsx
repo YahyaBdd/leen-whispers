@@ -52,11 +52,11 @@ export default function Services({dict}) {
             <div className="sbox-3 sb-2 wow fadeInUp">
               {/* Icon */}
               <div className="sbox-ico ico-65">
-                <span className="flaticon-eyelashes color--black" />
+                <span className="flaticon-hair-cut-2 color--black" />
               </div>
               {/* Text */}
               <div className="sbox-txt">
-                <p>{dict.icons.eyelash}</p>
+                <p>{dict.icons.hair}</p>
               </div>
             </div>
           </div>{" "}
