@@ -46,12 +46,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-hairstyle',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'Hair Styling Expert',
-        name: 'Gina',
-        imageUrl: 'flaticon-hairstyle',
-        profileLink: 'artist-details.html',
-        },
+        // {
+        // title: 'Hair Styling Expert',
+        // name: 'Gina',
+        // imageUrl: 'flaticon-hairstyle',
+        // profileLink: 'artist-details.html',
+        // },
         ],
         },
         {
@@ -63,12 +63,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-makeup',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'Makeup Artist',
-        name: 'Lina',
-        imageUrl: 'flaticon-makeup',
-        profileLink: 'artist-details.html',
-        },
+        // {
+        // title: 'Makeup Artist',
+        // name: 'Lina',
+        // imageUrl: 'flaticon-makeup',
+        // profileLink: 'artist-details.html',
+        // },
         {
         title: 'Makeup Artist',
         name: 'Zoya',
@@ -98,12 +98,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-nail',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'Nail Artist',
-        name: 'Gina',
-        imageUrl: 'flaticon-nail',
-        profileLink: 'artist-details.html',
-        }
+        // {
+        // title: 'Nail Artist',
+        // name: 'Gina',
+        // imageUrl: 'flaticon-nail',
+        // profileLink: 'artist-details.html',
+        // }
         ],
         },
         {
@@ -115,12 +115,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-foot-massage',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'Massage Specialist',
-        name: 'Gina',
-        imageUrl: 'flaticon-foot-massage',
-        profileLink: 'artist-details.html',
-        }
+        // {
+        // title: 'Massage Specialist',
+        // name: 'Gina',
+        // imageUrl: 'flaticon-foot-massage',
+        // profileLink: 'artist-details.html',
+        // }
         ],
         },
         {
@@ -140,17 +140,17 @@ export default function Team({lang}) {
         },
         ],
         },
-        {
-        category: 'Body Care',
-        members: [
-        {
-        title: 'Body Care Specialist',
-        name: 'Gina',
-        imageUrl: 'flaticon-facial-treatment',
-        profileLink: 'artist-details.html',
-        },
-        ],
-        },
+        // {
+        // category: 'Body Care',
+        // members: [
+        // {
+        // title: 'Body Care Specialist',
+        // name: 'Gina',
+        // imageUrl: 'flaticon-facial-treatment',
+        // profileLink: 'artist-details.html',
+        // },
+        // ],
+        // },
         {
         category: 'Skin Care',
         members: [
@@ -203,12 +203,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-hairstyle',
         profileLink: 'artist-details.html', 
         },
-        {
-        title: 'أخصائية تصفيف الشعر',
-        name: 'جين',
-        imageUrl: 'flaticon-hairstyle',
-        profileLink: 'artist-details.html',
-        },
+        // {
+        // title: 'أخصائية تصفيف الشعر',
+        // name: 'جين',
+        // imageUrl: 'flaticon-hairstyle',
+        // profileLink: 'artist-details.html',
+        // },
         ],
         },
         {
@@ -220,12 +220,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-makeup',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'أخصائية مايك اب',
-        name: 'لين',
-        imageUrl: 'flaticon-makeup',
-        profileLink: 'artist-details.html',
-        },
+        // {
+        // title: 'أخصائية مايك اب',
+        // name: 'لين',
+        // imageUrl: 'flaticon-makeup',
+        // profileLink: 'artist-details.html',
+        // },
         {
         title: 'أخصائية مايك اب',
         name: 'زويا',
@@ -255,12 +255,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-nail',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'أخصائية الاظافر',
-        name: 'جين',
-        imageUrl: 'flaticon-nail',
-        profileLink: 'artist-details.html',
-        }
+        // {
+        // title: 'أخصائية الاظافر',
+        // name: 'جين',
+        // imageUrl: 'flaticon-nail',
+        // profileLink: 'artist-details.html',
+        // }
         ],
         },
         {
@@ -272,25 +272,25 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-foot-massage',
         profileLink: 'artist-details.html',
         },
-        {
-        title: 'أخصائية مساج',
-        name: 'جين',
-        imageUrl: 'flaticon-foot-massage',
-        profileLink: 'artist-details.html',
-        }
+        // {
+        // title: 'أخصائية مساج',
+        // name: 'جين',
+        // imageUrl: 'flaticon-foot-massage',
+        // profileLink: 'artist-details.html',
+        // }
         ],
         },
-        {
-        category: ' العناية بالجسم',
-        members: [
-        {
-        title: 'أخصائية العناية بالجسم',
-        name: 'جين',
-        imageUrl: 'flaticon-facial-treatment',
-        profileLink: 'artist-details.html',
-        },
-        ],
-        },
+        // {
+        // category: ' العناية بالجسم',
+        // members: [
+        // {
+        // title: 'أخصائية العناية بالجسم',
+        // name: 'جين',
+        // imageUrl: 'flaticon-facial-treatment',
+        // profileLink: 'artist-details.html',
+        // },
+        // ],
+        // },
         {
         category: 'الحواجب والرموش',
         members: [
