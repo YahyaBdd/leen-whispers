@@ -10,6 +10,8 @@ import Discount from '@/components/Discount';
 import Location from '@/components/Location';
 import {getDictionary} from "@/get-dictionary";
 import DiscountModal from '@/components/DiscountModal';
+import VideoSection from '@/components/VideoSection';
+
 
 
 export default async function Home({ params: { lang } }) {
@@ -22,6 +24,8 @@ export default async function Home({ params: { lang } }) {
   {/* PAGE CONTENT */}
   <div id="page" className="page">
     <HomeHero dict={dictionary['heroSection']}/>
+
+    <VideoSection dict={dictionary['specialOffer']["0"]} />
     {/* TEXT CONTENT */}
     <TextCard1 dict={dictionary["contentSection"]} />
 
@@ -44,7 +48,9 @@ export default async function Home({ params: { lang } }) {
     <Testimonials dict={dictionary["testemonials"]} />
     {/* LOCATION */}
     <Location dict={dictionary["location"]} />
+
     <DiscountModal dict={dictionary["modal"]} />
+
   </div>{" "}
   {/* END PAGE CONTENT */}
 </div>

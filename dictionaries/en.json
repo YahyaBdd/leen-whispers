@@ -255,11 +255,12 @@
     "modalText": "Sign up to our newsletter to receive your coupon code",
     "emailPlaceholder": "Enter your email",
     "submitButton": "Submit"
-}
+},
 
-
-  
-  
-  
-  
+  "specialOffer":{
+    "0":{
+      "title": "Founding Day offers",
+      "subtitle": "20 Days Only"
+    }
+  } 
 }
