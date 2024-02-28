@@ -12,6 +12,7 @@ import {getDictionary} from "@/get-dictionary";
 import DiscountModal from '@/components/DiscountModal';
 import VideoSection from '@/components/VideoSection';
 import OfferGallery from '@/components/OfferGallery';
+import VideoPopup from '@/components/VideoPopup';
 
 
 
@@ -23,6 +24,7 @@ export default async function Home({ params: { lang } }) {
     
 <div>
   {/* PAGE CONTENT */}
+  <VideoPopup />
   <div id="page" className="page">
     <HomeHero dict={dictionary['heroSection']}/>
 
