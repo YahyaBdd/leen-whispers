@@ -14,9 +14,9 @@ export default function VideoSection({dict}) {
             <div className="txt-block text-center">
               <h2 className="h2-title"><span class="fi fi-sa fib" />   {dict.title}   <span class="fi fi-sa fib" /></h2>
               {/* Text */}
-              <p className="mb-3">
+              {/* <p className="mb-3">
               {dict.subtitle}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
