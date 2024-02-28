@@ -11,6 +11,7 @@ import Location from '@/components/Location';
 import {getDictionary} from "@/get-dictionary";
 import DiscountModal from '@/components/DiscountModal';
 import VideoSection from '@/components/VideoSection';
+import OfferGallery from '@/components/OfferGallery';
 
 
 
@@ -26,6 +27,7 @@ export default async function Home({ params: { lang } }) {
     <HomeHero dict={dictionary['heroSection']}/>
 
     <VideoSection dict={dictionary['specialOffer']["0"]} />
+    <OfferGallery dict={dictionary["offerGallery"]}/>
     {/* TEXT CONTENT */}
     <TextCard1 dict={dictionary["contentSection"]} />
 
