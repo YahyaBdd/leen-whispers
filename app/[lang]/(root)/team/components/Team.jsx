@@ -46,6 +46,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-hairstyle',
         profileLink: 'artist-details.html',
         },
+        {
+        title: 'Hair Styling Expert',
+        name: 'Jane',
+        imageUrl: 'flaticon-hairstyle',
+        profileLink: 'artist-details.html',
+        },
         // {
         // title: 'Hair Styling Expert',
         // name: 'Gina',
@@ -60,6 +66,12 @@ export default function Team({lang}) {
         {
         title: 'Makeup Artist',
         name: 'Wafa',
+        imageUrl: 'flaticon-makeup',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'Makeup Artist',
+        name: 'Leen',
         imageUrl: 'flaticon-makeup',
         profileLink: 'artist-details.html',
         },
@@ -95,6 +107,18 @@ export default function Team({lang}) {
         {
         title: 'Nail Artist',
         name: 'Jessica',
+        imageUrl: 'flaticon-nail',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'Nail Artist',
+        name: 'Jane',
+        imageUrl: 'flaticon-nail',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'Nail Artist',
+        name: 'Sofia',
         imageUrl: 'flaticon-nail',
         profileLink: 'artist-details.html',
         },
@@ -135,6 +159,12 @@ export default function Team({lang}) {
         {
         title: 'Eyebrows and eyelashes Artist',
         name: 'Hajar',
+        imageUrl: 'flaticon-eyelashes',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'Eyebrows and eyelashes Artist',
+        name: 'Sofia',
         imageUrl: 'flaticon-eyelashes',
         profileLink: 'artist-details.html',
         },
@@ -203,6 +233,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-hairstyle',
         profileLink: 'artist-details.html', 
         },
+        {
+        title: 'أخصائية تصفيف الشعر',
+        name: 'جاين',
+        imageUrl: 'flaticon-hairstyle',
+        profileLink: 'artist-details.html', 
+        },
         // {
         // title: 'أخصائية تصفيف الشعر',
         // name: 'جين',
@@ -232,6 +268,12 @@ export default function Team({lang}) {
         imageUrl: 'flaticon-makeup',
         profileLink: 'artist-details.html',
         },
+        {
+        title: 'أخصائية مايك اب',
+        name: 'لين',
+        imageUrl: 'flaticon-makeup',
+        profileLink: 'artist-details.html',
+        },
         ],
         },
         {
@@ -252,6 +294,18 @@ export default function Team({lang}) {
         {
         title: 'أخصائية الاظافر',
         name: 'جيسيكا',
+        imageUrl: 'flaticon-nail',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'أخصائية الاظافر',
+        name: 'جاين',
+        imageUrl: 'flaticon-nail',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'أخصائية الاظافر',
+        name: 'صوفيا',
         imageUrl: 'flaticon-nail',
         profileLink: 'artist-details.html',
         },
@@ -303,6 +357,12 @@ export default function Team({lang}) {
         {
         title: 'أخصائية الحواجب والرموش',
         name: 'هبة',
+        imageUrl: 'flaticon-eyelashes',
+        profileLink: 'artist-details.html',
+        },
+        {
+        title: 'أخصائية الحواجب والرموش',
+        name: 'صوفيا ',
         imageUrl: 'flaticon-eyelashes',
         profileLink: 'artist-details.html',
         },

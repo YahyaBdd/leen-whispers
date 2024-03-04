@@ -939,7 +939,13 @@ export const teamMembersEn = [
   name: 'Jane',
   imageUrl: 'flaticon-nail',
   profileLink: 'artist-details.html',
-  }
+  },
+  {
+    title: 'Nail Artist',
+    name: 'Sofia',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
+    }
   ],
   },
   {
@@ -974,6 +980,12 @@ export const teamMembersEn = [
   imageUrl: 'flaticon-eyelashes',
   profileLink: 'artist-details.html',
   },
+  {
+    title: 'Eyebrows and eyelashes Artist',
+    name: 'Sofia',
+    imageUrl: 'flaticon-eyelashes',
+    profileLink: 'artist-details.html',
+},
   ],
   },
   {
@@ -1098,6 +1110,12 @@ export const teamMembersAr = [
     name: 'جين',
     imageUrl: 'flaticon-nail',
     profileLink: 'artist-details.html',
+    },
+    {
+    title: 'أخصائية الاظافر',
+    name: 'صوفيا',
+    imageUrl: 'flaticon-nail',
+    profileLink: 'artist-details.html',
     }
     ],
     },
@@ -1144,6 +1162,12 @@ export const teamMembersAr = [
     imageUrl: 'flaticon-eyelashes',
     profileLink: 'artist-details.html',
     },
+    {
+      title: 'أخصائية الحواجب والرموش',
+      name: 'صوفيا',
+      imageUrl: 'flaticon-eyelashes',
+      profileLink: 'artist-details.html',
+      },
     ],
     },
     {
