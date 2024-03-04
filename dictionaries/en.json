@@ -57,9 +57,9 @@
     "workingHours": {
       "title": "Working Hours",
       "days": [
-        { "day": "Mon-Thu", "hours": "10:00AM - 10:00PM" },
+        { "day": "sat-Thu", "hours": "10:00AM - 10:00PM" },
         { "day": "friday", "hours": "02:00AM - 10:00PM" },
-        { "day": "sat-Sun", "hours": "10:00PM - 10:00PM" }
+        { "day": "sat-Sun", "hours": "10:00AM - 10:00PM" }
       ]
     }
   },
