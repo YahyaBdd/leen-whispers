@@ -6,7 +6,7 @@ import Image4 from "@/assets/images/ig/ig_04.jpg";
 import Image5 from "@/assets/images/ig/ig_05.jpg";
 import Image6 from "@/assets/images/ig/ig_06.jpg";
 import Image7 from "@/assets/images/model-04.jpeg";
-import Image8 from "@/assets/images/ig/ig_08.jpg";
+import Image8 from "@/assets/images/ig_01.jpg";
 import Image9 from "@/assets/images/ig/ig_09.jpg";
 
 export default function ImageGallery({lang}) {

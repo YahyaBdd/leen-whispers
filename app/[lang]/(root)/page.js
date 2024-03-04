@@ -10,9 +10,6 @@ import Discount from '@/components/Discount';
 import Location from '@/components/Location';
 import {getDictionary} from "@/get-dictionary";
 import DiscountModal from '@/components/DiscountModal';
-import VideoSection from '@/components/VideoSection';
-import OfferGallery from '@/components/OfferGallery';
-import VideoPopup from '@/components/VideoPopup';
 
 
 
