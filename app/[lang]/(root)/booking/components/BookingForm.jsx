@@ -196,6 +196,7 @@ export default function BookingForm({ lang, userData }) {
     selectStaff: 'Select Staff',
     appointmentDatePlaceholder: 'Appointment Date*',
     bookButton: 'Or Pay In Person',
+    anyStaff: 'Any Staff',
   };
 
   const contentArabic = {
@@ -207,6 +208,7 @@ export default function BookingForm({ lang, userData }) {
     selectStaff: 'اختر الموظف',
     appointmentDatePlaceholder: 'تاريخ الموعد*',
     bookButton: 'أو ادفع في المكان',
+    anyStaff: 'أي موظف',
   };
 
   const content = lang === 'ar' ? contentArabic : contentEnglish;
@@ -304,6 +306,7 @@ export default function BookingForm({ lang, userData }) {
             <div className="col-lg-6">
               <select name="staff" className="form-select staff" aria-label="Staff Select" onChange={handleSelectedStaff} >
                 <option value="">{content.selectStaff}</option> 
+                <option value="any" style={{color:'black'}}>{content.anyStaff}</option> 
                 {teamMembers.map((category, index) => (
                   <optgroup key={index} label={category.category} style={{color:'black'}}>
                     {category.members.map((member, i) => (
