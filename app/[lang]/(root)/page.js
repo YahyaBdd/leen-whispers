@@ -24,12 +24,9 @@ export default async function Home({ params: { lang } }) {
     
 <div>
   {/* PAGE CONTENT */}
-  <VideoPopup />
   <div id="page" className="page">
     <HomeHero dict={dictionary['heroSection']}/>
 
-    <VideoSection dict={dictionary['specialOffer']["0"]} />
-    <OfferGallery dict={dictionary["offerGallery"]}/>
     {/* TEXT CONTENT */}
     <TextCard1 dict={dictionary["contentSection"]} />
 
