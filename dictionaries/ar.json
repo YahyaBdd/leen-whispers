@@ -45,13 +45,13 @@
     },
     "getInTouch": {
       "title": "تواصل معنا",
-      "phone": "+966 55 607 0858",
+      "phone": "+966 506070872",
       "email": "Info@leenwhispers.com",
       "socials": [
         { "platform": "instagram-1", "link": "https://www.instagram.com/leenwhispersbeauty" },
         { "platform": "tik-tok", "link": "https://www.tiktok.com/@leen.whispers.bea" },
         { "platform": "snapchat", "link": "https://www.snapchat.com/add/leenwhispers" },
-        { "platform": "whatsapp", "link": "https://iwtsp.com/966556070858" }
+        { "platform": "whatsapp", "link": "https://iwtsp.com/966506070872" }
       ]
     },
     "workingHours": {
@@ -199,7 +199,7 @@
           "الرياض 12461، المملكة العربية السعودية"
         ],
         "contacts": [
-          "+966 55 607 0858",
+          "+966 506070872",
           "Info@leenwhispers.com"
         ]
       },
