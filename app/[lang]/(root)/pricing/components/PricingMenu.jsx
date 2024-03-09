@@ -2,7 +2,7 @@ export default function PricingMenu({ lang }) {
 
   return (
     <div>
-    <iframe src="https://drive.google.com/file/d/1kvSkHUnAEmIkRwhFAAQQlebPU6VbWZA7/preview" style={{width:"100vw",height:"100vh"}} allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1VLc977IodXUbYXW0UB9G7EDk1tqg-Z3h/preview" style={{width:"100vw",height:"100vh"}} allow="autoplay"></iframe>
     </div>
   )
 }
