@@ -58,14 +58,12 @@ export default function BookingForm({ lang, userData }) {
 
     for (const item of appointment) {
       try {
-        console.log("adding item to db");
         //if payment method is paypal, add the order id to the appointment
         if(paymentMethod === 'paypal'){
           item.orderId = orderId
         }
 
         const ref = await addDoc(collection(db, "appointments"), item);
-        console.log("Document written with ID: ", ref.id);
       } catch (error) {
         console.log(error);
       }
@@ -121,7 +119,6 @@ export default function BookingForm({ lang, userData }) {
     }
     setErrors(errors)
     console.log('errors', errors)
-    console.log('formData', formData)
     return valid
   }
 
@@ -138,17 +135,14 @@ export default function BookingForm({ lang, userData }) {
   };
 
   const handleSelectedService = (e) => {
-    console.log('e.target.value', e.target.value)
     const srv = e.target.value.split('-')
     const data = {
       description: srv[0], 
       price: srv[1]
     }
-    console.log('data', data)
     setFormData({...formData, service: data})
     // Get the tags from the service description
     const tags = getTags(srv[0], lang);
-    console.log('tags', tags)
 
     const team = lang === 'ar' ? teamMembersAr : teamMembersEn;
 
@@ -171,14 +165,12 @@ export default function BookingForm({ lang, userData }) {
     if(validateForm()){
       const appointmentCookie = localStorage.getItem("appointment");
       if(appointmentCookie){
-        // console.log('Existing appointment cookie found');
         const appointment = JSON.parse(appointmentCookie);
         appointment.push(formData)
         localStorage.setItem("appointment", JSON.stringify(appointment));
         setCartItems(appointment)
         alert("Service added to cart")
       } else {
-        // console.log('No appointment cookie found');
         const appointment = [formData]
         localStorage.setItem("appointment", JSON.stringify(appointment));
         setCartItems(appointment)
@@ -366,7 +358,6 @@ export default function BookingForm({ lang, userData }) {
                   const appointmentCookie = localStorage.getItem("appointment");
                   const appointment = JSON.parse(appointmentCookie);
                   const purchase_units = appointment.map((item, index) => {
-                    console.log('price', item.service.price, '|| exchangeRate', exchangeRate)
                     return {
                       reference_id: `${Date.now()}${index}`,
                       description:item.service.description,
@@ -375,7 +366,6 @@ export default function BookingForm({ lang, userData }) {
                       }
                     }
                   })
-                  console.log('purchase_units', purchase_units)
                   return actions.order.create(
                     { purchase_units: [...purchase_units]}
                   );

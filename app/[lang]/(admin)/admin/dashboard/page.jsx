@@ -11,7 +11,6 @@ function page() {
   useEffect(() => {
     admin = localStorage.getItem('admin')
     timeStamp = localStorage.getItem('timeStamp') > Date.now()- 3600000
-    console.log(admin,timeStamp)
   }, [])
 
   return (

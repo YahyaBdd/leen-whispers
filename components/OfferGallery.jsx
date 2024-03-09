@@ -20,7 +20,6 @@ function OfferGallery() {
                 prevEl: ".swiper-button-prev",
             },
             });
-            console.log('hello')
         }}/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <div className="swiper mySwiper" style={{width:'80vw'}}>
