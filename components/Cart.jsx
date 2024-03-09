@@ -4,6 +4,7 @@ import { ShoppingBag } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { getCategoryName, getCategoryIcon } from '@/constants';
 
 function Cart({mode}) {
   const [show, setShow] = useState(false);
@@ -11,6 +12,7 @@ function Cart({mode}) {
 
   const theme = localStorage.getItem("theme");
   const items = JSON.parse(localStorage.getItem("appointment")) || {};
+  console.log(items);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -59,12 +61,20 @@ function Cart({mode}) {
           Object.keys(items).map((key) => (
             <Card>
               <Card.Body>
+                <div style={{display:"flex"}}>
+              <div className="sbox-ico ico-65" style={{display:'flex' , paddingRight: '15px' ,alignItems: 'center'}}>
+                <span className={getCategoryIcon(getCategoryName(items[key].service.description))} />
+              </div>
+              <div>
+
               <p>
                 {items[key].service.description} by {items[key].staff}
               </p>
               <p>
                 {items[key].date} at {items[key].time} - In Cart
               </p>
+              </div>
+              </div>
               </Card.Body>
             </Card>
           ))

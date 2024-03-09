@@ -1195,4 +1195,35 @@ export function getTags(serviceName, lang) {
   }
   return null;
 }
+
+export function getCategoryName(serviceName) {
+  for (const category of newPricingEn.categories) {
+    for (const item of category.items) {
+      if (item.description === serviceName) {
+        return category.name;
+      }
+    }
+  }
+  return "Category not found";
+}
   
+export function getCategoryIcon(categoryName) {
+  const iconMap = {
+    "Hair Care": "flaticon-mortar color--black",
+    "Hairstyles": "flaticon-hair-cut-2 color--black",
+    "Hair Dyeing": "flaticon-hair-dye color--black",
+    "Protein": "flaticon-protection color--black",
+    "Caviar": "flaticon-seat color--black",
+    "Nail Care": "flaticon-nail color--black",
+    "Eyelash Care": "flaticon-eyelashes color--black",
+    "Skin Care": "flaticon-facial-treatment color--black",
+    "Body Care": "flaticon-hot-stones color--black",
+    "Home Services": "flaticon-location-pin color--black",
+    "Bridal Package": "flaticon-make-up color--black",
+    "Special Treats": "flaticon-foot-massage color--black",
+    "Bridal Pampering": "flaticon-make-up color--black",
+    "Makeup": "flaticon-makeup color--black"
+  };
+
+  return iconMap[categoryName] || "Unknown icon";
+}
