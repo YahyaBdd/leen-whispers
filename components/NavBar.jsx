@@ -125,7 +125,7 @@ export default function NavBar({dict,lang}) {
                     </li>
                     {/* to delete */}
                     <li aria-haspopup="true">
-                      <Cart mode={theme} />
+                      <Cart mode={theme} lang={lang} />
                     </li>
                     {/* DROPDOWN SUB MENU */}
                     <li aria-haspopup="true">

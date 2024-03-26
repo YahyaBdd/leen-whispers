@@ -1196,8 +1196,9 @@ export function getTags(serviceName, lang) {
   return null;
 }
 
-export function getCategoryName(serviceName) {
-  for (const category of newPricingEn.categories) {
+export function getCategoryName(serviceName,lang) {
+  const newPricing = newPricingAr.categories.concat(newPricingEn.categories);
+  for (const category of newPricing) {
     for (const item of category.items) {
       if (item.description === serviceName) {
         return category.name;
@@ -1222,7 +1223,21 @@ export function getCategoryIcon(categoryName) {
     "Bridal Package": "flaticon-make-up color--black",
     "Special Treats": "flaticon-foot-massage color--black",
     "Bridal Pampering": "flaticon-make-up color--black",
-    "Makeup": "flaticon-makeup color--black"
+    "Makeup": "flaticon-makeup color--black",
+    "العناية بالشعر": "flaticon-mortar color--black",
+    "التسريحات": "flaticon-hair-cut-2 color--black",
+    "ﺻﺒﻐﺎت اﻟﺸﻌﺮ": "flaticon-hair-dye color--black",
+    "اﻟﺒﺮوﺗﻴﻦ": "flaticon-protection color--black",
+    "اﻟﻜﺎﻓﻴﺎر": "flaticon-seat color--black",
+    "اﻟﻌﻨﺎﻳﺔ ﺑﺎﻻﻇﺎﻓﺮ": "flaticon-nail color--black",
+    "اﻟﻌﻨﺎﻳﺔ ﺑﺎﻟﺮﻣﻮش": "flaticon-eyelashes color--black",
+    "اﻟﻌﻨﺎﻳﺔ ﺑﺎﻟﺒﺸﺮة": "flaticon-facial-treatment color--black",
+    "اﻟﻌﻨﺎﻳﺔ ﺑﺎﻟﺠﺴﻢ": "flaticon-hot-stones color--black",
+    "اﻟﺨﺪﻣﺎت اﻟﻤﻨﺰﻟﻴﺔ": "flaticon-location-pin color--black",
+    "ﺑﻜﺞ اﻟﻌﺮوس": "flaticon-make-up color--black",
+    "دلع خاص": "flaticon-foot-massage color--black",
+    "دﻟﻊ اﻟﻌﺮوﺳﺔ": "flaticon-make-up color--black",
+    "ﻣﻚ آب": "flaticon-makeup color--black"
   };
 
   return iconMap[categoryName] || "Unknown icon";

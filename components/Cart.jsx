@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { getCategoryName, getCategoryIcon } from '@/constants';
 
-function Cart({mode}) {
+function Cart({mode,lang}) {
   const [show, setShow] = useState(false);
   const [iconColor, setIconColor] = useState(localStorage.getItem("theme") === "light" ? '#353f4f' : '#ffffff');
 
@@ -59,8 +59,8 @@ function Cart({mode}) {
             <Card>
               <Card.Body>
                 <div style={{display:"flex"}}>
-              <div className="sbox-ico ico-65" style={{display:'flex' , paddingRight: '15px' ,alignItems: 'center'}}>
-                <span className={getCategoryIcon(getCategoryName(items[key].service.description))} />
+              <div className="sbox-ico ico-65" style={{display:'flex' , paddingRight: '15px' ,alignItems: 'center', paddingLeft: '15px'}}>
+                <span className={getCategoryIcon(getCategoryName(items[key].service.description,lang))} />
               </div>
               <div>
 
