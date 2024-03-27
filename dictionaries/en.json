@@ -58,8 +58,7 @@
       "title": "Working Hours",
       "days": [
         { "day": "sat-Thu", "hours": "10:00AM - 10:00PM" },
-        { "day": "friday", "hours": "02:00AM - 10:00PM" },
-        { "day": "sat-Sun", "hours": "10:00AM - 10:00PM" }
+        { "day": "friday", "hours": "02:00AM - 10:00PM" }
       ]
     }
   },
@@ -162,14 +161,12 @@
     "title": "Working Hours",
     "text": "Our working hours are designed to accommodate your busy schedule. We look forward to serving you during the following hours:",
     "days": {
-      "monWed": "Mon – Thu",
-      "friday": "Friday",
-      "sun": "Sun - Sun"
+      "monWed": "Sat – Thu",
+      "friday": "Friday"
     },
     "hours": {
       "monWed": "10:00 AM - 10:00 PM",
-      "friday": "02:00 PM - 10:00 PM",
-      "sun": "10:00 AM - 10:00 PM"
+      "friday": "02:00 PM - 10:00 PM"
     }
   },
 
