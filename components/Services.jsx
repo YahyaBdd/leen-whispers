@@ -126,7 +126,7 @@ export default function Services({dict}) {
         <div className="col">
           <div className="more-btn">
             <a
-              href="pricing-2.html"
+              href="/pricing"
               className="btn btn--tra-black hover--black"
             >
              {dict.cta}

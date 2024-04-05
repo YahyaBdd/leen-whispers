@@ -18,12 +18,6 @@ export default function Team({lang}) {
         },
         {
         title: 'Hair Styling Expert',
-        name: 'Iman',
-        imageUrl: 'flaticon-hairstyle',
-        profileLink: 'artist-details.html',
-        },
-        {
-        title: 'Hair Styling Expert',
         name: 'Manal',
         imageUrl: 'flaticon-hairstyle',
         profileLink: 'artist-details.html',
